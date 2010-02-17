@@ -1,0 +1,9 @@
+*~
+run
+log/*
+etc/dbtest
+tmp/*
+system.log
+www/*.vuh
+data/*
+packages/um/resources/startup-video/*

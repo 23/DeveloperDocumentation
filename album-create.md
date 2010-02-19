@@ -24,7 +24,8 @@ The minimum required [permission level](index#permission-level) is:
 
 ### Example XML Response
 
-    <response status="ok" permission_level="write" message="The album was successfully created" cached="0">
+    <response status="ok" permission_level="write" 
+      message="The album was successfully created" cached="0">
       <album_id>123456</album_id>
       <token>hqzry7xaaekyavpjghpZkt1ykbelKjai</token>
     </response>

@@ -8,7 +8,7 @@ Upload a new file to the site.
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td><tt>file</tt> <small>(required)</small></td><td>The file to upload. (Note that this parameter &minus; neither the filename nor the file content &minus; shouldn't be included in the api signature).</td></tr>
-  <tr><td><tt>user_id</tt></td><td>The user's ID. If no user ID is given, the objects will be uploaded anonymously.</td></tr>
+  <tr><td><tt>user_id</tt></td><td>The user's ID. If no user ID is given, the objects will be uploaded anonymously. Requires <tt>super</tt>, otherwise files are uploaded using the authenticated user.</td></tr>
   <tr><td><tt>album_id</tt></td><td>A album (or channel) ID.</td></tr>
   <tr><td><tt>title</tt></td><td>A title for the upload. All HTML tags will be stripped away from the title.</td></tr>
   <tr><td><tt>description</tt></td><td>A description of upload. The value can include save HTML tags such as &lt;b&gt; or &lt;p&gt;; however, if any disallowed tags are included, all html with be stripped from the description.</td></tr>

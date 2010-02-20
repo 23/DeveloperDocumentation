@@ -94,24 +94,6 @@ Whenever a request to the API fails, a response detailing the exception is retur
 
 ## Methods
 
-### Photos or videos
-
-Methods for uploading and managing videos and photos.
-
-* [/api/photo/upload](photo-upload): Upload a new photo or video.
-* [/api/photo/list](photo-list): List and search through photos and videos
-* [/api/photo/delete](photo-delete): Delete a photo or video
-* [/api/photo/update](photo-update): Update the meta data of a photo or video
-
-### Users
-
-Methods for managing users.
-
-* [/api/user/create](user-create): Create a new user account
-* [/api/user/login](user-login): Log the client in to a user account
-* [/api/user/get](user-get): Get user details
-* [/api/user/list](user-list): List users
-
 ### Albums or channels
 
 Methods for creating and managing albums and channels.
@@ -127,12 +109,19 @@ Methods for listing and managing comments.
 
 * [/api/comment/list](comment-list): List comments
 
-### Tags
+### Photos and videos
 
-Methods for searching tags.
+Methods for uploading and managing videos and photos.
 
-* [/api/tag/list](tag-list): List or search through tags
-* [/api/tag/related](tag-related): List related tags
+* [/api/photo/upload](photo-upload): Upload a new photo or video.
+* [/api/photo/list](photo-list): List and search through photos and videos
+* [/api/photo/delete](photo-delete): Delete a photo or video
+* [/api/photo/update](photo-update): Update the meta data of a photo or video
+
+<div style="display:none;">
+* [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
+* [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
+</div>
 
 ### Sessions
 
@@ -140,11 +129,43 @@ Methods controlling access to a closed site and for implementing single sign-on.
 
 * [/api/session/sign](session-sign): Grant access to a client
 
+### Site
+
+Methods for querying meta data about sites.
+
+* [/api/site/get](site-get): Get information about the site.
+
+### Tags
+
+Methods for searching tags.
+
+* [/api/tag/list](tag-list): List or search through tags
+* [/api/tag/related](tag-related): List related tags
+
 ### Testing
 
 Methods for testing communication with the API
 
 * [/api/echo](echo): Mirrors parameters in return
+
+### Users
+
+Methods for managing users.
+
+* [/api/user/create](user-create): Create a new user account
+* [/api/user/login](user-login): Log the client in to a user account
+* [/api/user/get](user-get): Get user details
+* [/api/user/list](user-list): List users
+
+<div style="display:none;">
+### Video player
+
+Methods for listing and embedding video players
+
+* [/api/player/list](player-list): List available video players.
+* [/api/player/embed](player-embed): Get a video embed code for a specific player.
+</div>
+
 
 
 ---

@@ -117,11 +117,8 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/delete](photo-delete): Delete a photo or video
 * [/api/photo/update](photo-update): Update the meta data of a photo or video
-
-<div style="display:none;">
 * [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
-</div>
 
 ### Sessions
 
@@ -241,6 +238,7 @@ Finally, you can get raw JSON data without any unnecessary syntactic sugar using
 ---
 
 
+
 ## Pagination
 
 A number of API methods (including for example [/api/photo/list](photo-list), [/api/user/list](user-list) and [/api/tag/list](tag-list)) returns a list of objects. These lists will often only return a subset of the data, and the programmer will need to handle pagination explicitly. This is done using `p` and `size`:
@@ -339,6 +337,15 @@ The extra property `cache_time` notes when the content of the response was origi
 
 For performance reasons, we ask you to use the cached version of any request, but you will be able to ask for a non-cached version of a response either by signing your requests or by adding a `?time=<current_timestamp>` parameter to your request.
 
+
+---
+
+
+## Browser-based uploads
+
+Browser-based uploading is designed to allow API consumers to pre-authenticate uploads to their 23 sites -- and enables applications to let users upload photos and videos to 23 using browser-based uploading. This scheme allows you to accept uploads from users without ever having to proxy or host the files from you server. You should opt for this approach to uploading if you do not want to host or store the uploaded files.
+
+The entire flow is described [here](browser-based-uploads)
 
 ---
 

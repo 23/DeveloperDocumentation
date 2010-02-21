@@ -1,8 +1,8 @@
 # API Method: /api/photo/get-upload-token
 
-Prepare an upload directly from a user's web browser.
+Pre-authenticate an upload, allowing your client to upload directly to 23's servers from a web browser.
 
-This method can be used to pre-authenticated uploads to a site without proxying them through your servers and the API. <a href="#flow">The flow</a> is described in detail below, but in general terms this method will return a token which can be included in a standard HTML form (or even a more advanced Flash uploader) to upload photos or videos directly to 23's servers.
+This method can be used to pre-authenticated uploads to a site without proxying them through your servers and the API. The flow is described in detail in the <a href="browser-based-uploads">Browser-based uploads</a> section of the API documentation, but in general terms this method will return a token which can be included in a standard HTML form (or even a more advanced Flash uploader) to upload photos or videos directly to 23's servers.
 
 
 ### Parameters
@@ -71,9 +71,8 @@ The minimum required [permission level](index#permission-level) is:
       "endpoint": "/api/photo/get-upload-token"
     }
 
+### The callback
 
-### Flow
+The callback URL is defined by the `return_url` parameter, and the callback request will always take the form of a HTTP 301 redirect to a GET-style address. 
 
-TODO
-
-The callback request to this URL will always take the form of a HTTP 301 redirect to a GET-style address. The request will always include the <tt>upload_token</tt> and <tt>domain</tt> as a parameter. If the upload succeeded, the parameters <tt>photo_id</tt>, <tt>token</tt>, <tt>tree_id</tt> will be included. On upload failure, the callback includes an <tt>error_message</tt> parameter.
+The request will always include the <tt>upload_token</tt> and <tt>domain</tt> as a parameter. If the upload succeeded, the parameters <tt>photo_id</tt>, <tt>token</tt>, <tt>tree_id</tt> will be included. On upload failure, the callback includes an <tt>error_message</tt> parameter. [See flow details](browser-based-uploads).

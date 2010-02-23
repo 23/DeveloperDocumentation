@@ -8,3 +8,4 @@ www/*.vuh
 data/*
 packages/um/resources/startup-video/*
 lib/ruby/oauth.yml
+lib/php/visualplatform.config.php

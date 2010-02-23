@@ -11,22 +11,26 @@ The sample is available through...
 
 ## Requirements
 
-These scripts require Ruby and the `oauth` ruby gem to be installed.
+These scripts require PHP and the `oauth` pear package, which can easily be installed:
+
+    pear install HTTP_OAuth-alpha
+
+(There are a number of PHP libraries for OAuth, all with their own pros and cons. We've gone for the pear script in this sample since it's easy to install, but you should have a look at [the library list](http://oauth.net/code/) to see which one suits you best.)
 
 
 ## Authentication
 
 The API uses an OAuth-based authentication scheme for granting application access and for signing request. See [oauth.net](http://oauth.net) for further details.
 
-To prepare authentication, first following the documented steps to set up a consumer key and a consumer secret with 23, and then run the following command.
+To prepare authentication, first following the documented steps to set up a consumer key and a consumer secret with 23, and then run this command.
 
-    visualplatform-authenticate.rb -k <consumer_key> -s <consumer_secret> 
+    ./visualplatform-authenticate.php <consumer_key> <consumer_secret> 
 
-After you've completed the step prescribed in the script, you'll find a new file (`oauth.yml`) in your working directory containing your secret credentials -- including an access key and an access token.
+After you've completed the step prescribed in the script, you'll find a new file (`visualplatform.config.php`) in your working directory containing your secret credentials -- including an access key and an access token.
 
 
 ## Usage
 
 After authenticating your application, you can invoke an API method from the command-line by running:
 
-    visualplatform-command.rb <endpoint> <param1> <value1> <param2> <value2> ...
+    ./visualplatform-command.php <endpoint> <param1> <value1> <param2> <value2> ...

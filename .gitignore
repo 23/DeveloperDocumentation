@@ -7,3 +7,4 @@ system.log
 www/*.vuh
 data/*
 packages/um/resources/startup-video/*
+lib/ruby/oauth.yml

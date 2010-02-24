@@ -17,7 +17,7 @@
 $args = $_SERVER['argv'];
 $consumer_key = $args[1];
 $consumer_secret = $args[2];
-$domain = "reference.dev.visualtube.net";
+$domain = "api.dev.visualplatform.net";
 
 
 // Load dependencies
@@ -49,12 +49,30 @@ $oauth_verifier = trim(fgets($handle));
 fclose($handle);
 
 // 4. Exchange the request token for an access token
-$consumer->getAccessToken("http://".$domain."/oauth/access_token", $oauth_verifier, array(), "GET");
+//    (He're we're reading extra data from the access token request to 
+//    determine the domain and user_id of the authenticated user. 
+//    Unfortunately this PHP OAuth library doesn't return the excess
+//    data from the access token request, so we'll need to handle the
+//    request manually.)
+
+$response = $consumer->sendRequest("http://".$domain."/oauth/access_token", array("oauth_verifier" => $oauth_verifier), "GET");
+$data     = $response->getDataFromBody();
+
+if (empty($data['oauth_token']) || empty($data['oauth_token_secret'])) {
+    throw new HTTP_OAuth_Consumer_Exception_InvalidResponse(
+       'Failed getting token and token secret from response', $response
+    );
+}
+
+$consumer->setToken($data['oauth_token']);
+$consumer->setTokenSecret($data['oauth_token_secret']);
+
 
 // 5. Save credentials to config file
 $handle = @fopen("visualplatform.config.php", "w");
 $_conf = array(
-                'domain'       => $domain,
+                'domain'       => $data['domain'],
+                'user_id'      => $data['user_id'],
                 'key'          => $consumer->getKey(),
                 'secret'       => $consumer->getSecret(),
                 'token'        => $consumer->getToken(),

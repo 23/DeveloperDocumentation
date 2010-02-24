@@ -34,3 +34,7 @@ After you've completed the step prescribed in the script, you'll find a new file
 After authenticating your application, you can invoke an API method from the command-line by running:
 
     ./visualplatform-command.php <endpoint> <param1> <value1> <param2> <value2> ...
+
+The script also handles the special case of getting data in a native PHP data structure by parsing JSON data from the API:
+
+    ./visualplatform-command.php <endpoint> <param1> <value1> ... format php

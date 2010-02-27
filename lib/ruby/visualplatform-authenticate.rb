@@ -19,7 +19,7 @@ OPTIONS = {
   :outfile  => 'oauth.yml'
 }
 
-YAMMER_OAUTH = "http://reference.dev.visualtube.net" 
+VP_OAUTH = "http://api.visualplatform.net"
 
 ARGV.options do |o|
   script_name = File.basename($0)
@@ -49,7 +49,7 @@ unless OPTIONS[:key] && OPTIONS[:secret]
   raise ArgumentError, "Must supply consumer key and secret (use -h for help)"
 end
 
-consumer      = OAuth::Consumer.new OPTIONS[:key], OPTIONS[:secret], {:site => YAMMER_OAUTH}
+consumer      = OAuth::Consumer.new OPTIONS[:key], OPTIONS[:secret], {:site => VP_OAUTH}
 request_token = consumer.get_request_token
 
 puts "Please visit the following URL in your browser to authorize your application, then enter the 4 character security code when done: #{request_token.authorize_url}"

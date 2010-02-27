@@ -7,7 +7,6 @@
 #
 # Call the script:
 #  ./visualplatform-command.php <endpoint> <param1> <value1> <param2> <value2>
-#
 
 require('visualplatform.config.php');
 

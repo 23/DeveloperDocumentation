@@ -17,7 +17,7 @@
 $args = $_SERVER['argv'];
 $consumer_key = $args[1];
 $consumer_secret = $args[2];
-$domain = "api.dev.visualplatform.net";
+$domain = "api.visualplatform.net";
 
 
 // Load dependencies

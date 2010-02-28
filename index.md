@@ -44,7 +44,7 @@ The next section describes [how to authenticate your requests](#authentication),
 
 The 23 API uses the [OAuth 1.0a](http://oauth.net) protocol for user authorization and application identification.
 
-Generally, some requests can [made anonymously](#anonymous-access), but whenever your application needs to read unpublished data or update or add new data, authentication is required. This is done by setting up `consumer key` and a `consumer secret` for you application, and then by having an existing user authorize your access. When this is done, you'll have an additional `access token` and am `access token secret` which will be used alongside your consumer credentials to sign all requests.
+Generally, some requests can be [made anonymously](#anonymous-access), but whenever your application needs to read unpublished data or update or add new data, authentication is required. This is done by setting up `consumer key` and a `consumer secret` for you application, and then by having an existing user authorize your access. When this is done, you'll have an additional `access token` and am `access token secret` which will be used alongside your consumer credentials to sign all requests.
 
 All interaction with the OAuth authentication process in done through a generic domain, `http://api.visualplatform.net/oauth/*`, or through your site's own domain, `http://videos.example.com/oauth/*`. 
 

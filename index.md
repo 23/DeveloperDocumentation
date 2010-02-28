@@ -42,26 +42,35 @@ The next section describes [how to authenticate your requests](#authentication),
 
 ## Authentication
 
-###### Please note that the signing method described in this section is temporary and will be replaced by an [OAuth 1.0a](http://www.oauth.net)-based method in late February 2010. This change will allow developers to re-use existing code in their chosen programming framework/language to authenticate requests to the API. The signature method specified below will be valid until March 20th 2010.
+The API uses an [OAuth 1.0a](http://oauth.net)-based method for authenticating requests of the service. 
 
-To be able to use the application programming interface, you'll first need to activate it by visiting _http://www.yourdomain.com/api_ as a site owner (that is the person who originally created the site). After updating the form, you will see a 40 character key. This secret key is used to sign all requests to the site and can thus be used for creating new administrators and logging in as any user. The secret key should, indeed, be kept secret.
+Generally, some requests can [made anonymously](#anonymous-access), but whenever your application needs to read unpublished data or update or add new data, authentication is required. This is done by setting up `consumer key` and a `consumer secret` for you application, and then by having an existing user authorize your access. When this is done, you'll have an additional `access token` and am `access token secret` which will be used alongside your consumer credentials to sign all requests.
 
-Any request to the API must be signed with the secret key. For example, if you want to create a new user with the username `testuser` the email address `test@yourdomain.com` you need to send this basic request:
+All interaction with the OAuth authentication process in done through the generic domain `http://api.visualplatform.net/oauth/*` or through your site's own `http://videos.example.com/oauth/*`. We encourage you to use the generic domain, since this will handle domain changes gracefully and will allow you to reuse code. Requests to `http://api.visualplatform.net/oauth/access_token` will return the `domain` to use for all subsequent requests to the API ([more](oauth#domain)).
 
-    http://videos.example.com/api/user/create?username=testuser&email=test@yourdomain.com
+<table>
+  <tr>
+    <td>Request Token URL</td>
+    <td>http://api.visualplatform.net/oauth/request_token</td>
+  </tr>
+  <tr>
+    <td>Access Token URL</td>
+    <td>http://api.visualplatform.net/oauth/access_token</td>
+  </tr>
+  <tr>
+    <td>Authorize URL</td>
+    <td>http://api.visualplatform.net/oauth/authorize</td>
+  </tr>
+</table>
 
-The signature is the hex MD5 of a plain string with all the query parameters (except `file`, see below) and their values in alphabetical order (sorted by the name of the parameter), followed by the secret key. Assuming the secret_key is `1234567890`, the plain string is:
+You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.
 
-    md5(<paramA><valueA><paramB><valueB><paramC><valueC><secretKey>)
-    = md5(emailtest@yourdomain.comusernametestuser1234567890)
-    = b04236b0d7e654268a3b2535a1abc980
+At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of services, which means that most web-programming languages already has one of more implementations to handle both the process, the communication and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 
-The authenticated request would then be:
-
-    http://videos.example.com/api/user/create?username=testuser&email=test@yourdomain.com
-      &api_signature=b04236b0d7e654268a3b2535a1abc980
-
-**Do not** under any circumstances send the secret key in the request or generally share the secret.
+We've also created a set of samples on how to authenticate you application and communicate with the 23 API in a few common languages: 
+* (PHP samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/php/]
+* (Ruby samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/]
+* (Python samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/python/]
 
 
 ---
@@ -274,8 +283,6 @@ Of course, unpublished content on public sites and any content on non-public sit
 ---
 
 ## Permission levels
-
-###### Note that some of these permission levels (`read`, `write`, and `admin`) are only available through the OAuth [OAuth authentication process](#authentication). 
 
 The API operates with a set of different permission levels. At each level, some actions are allowed and some are prohibited:
 

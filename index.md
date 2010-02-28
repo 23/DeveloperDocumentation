@@ -71,12 +71,7 @@ We encourage you to use the generic domain, since this will handle domain change
 
 At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of other services, which means that most web-programming languages already has one or more implementations to handle all necessary communication including both the authentication process and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 
-We've also created a set of samples on how to authenticate your application and communicate with the 23 API in a few common languages: 
-
-* [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
-* [Ruby samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
-* [Python samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/python/)
-
+We've also created a set of samples on how to authenticate your application and communicate with the 23 API in [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 
 ---
 

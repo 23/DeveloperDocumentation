@@ -48,7 +48,7 @@ Generally, some requests can [made anonymously](#anonymous-access), but whenever
 
 All interaction with the OAuth authentication process in done through a generic domain, `http://api.visualplatform.net/oauth/*`, or through your site's own domain, `http://videos.example.com/oauth/*`. We encourage you to use the generic domain, since this will handle domain changes gracefully and will allow you to reuse code. Requests to `http://api.visualplatform.net/oauth/access_token` will return the `domain` to use for all subsequent requests to the API ([more](oauth#domain)).
 
-<table style="padding-bottom:10px;">
+<table>
   <tr>
     <td>Request Token URL: &nbsp;</td>
     <td><i>http://api.visualplatform.net/oauth/request_token</i></td>
@@ -63,7 +63,9 @@ All interaction with the OAuth authentication process in done through a generic 
   </tr>
 </table>
 
-**You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.**
+<br/>
+
+<b>You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.</b>
 
 At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of services, which means that most web-programming languages already has one of more implementations to handle both the process, the communication and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 

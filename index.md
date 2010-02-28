@@ -69,9 +69,9 @@ At first glance, the OAuth process might seem intimidating, but it has a major u
 
 We've also created a set of samples on how to authenticate you application and communicate with the 23 API in a few common languages: 
 
-* (PHP samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/php/]
-* (Ruby samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/]
-* (Python samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/python/]
+* [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
+* [Ruby samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
+* [Python samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/python/)
 
 
 ---

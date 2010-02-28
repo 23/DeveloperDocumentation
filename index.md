@@ -50,16 +50,16 @@ All interaction with the OAuth authentication process in done through the generi
 
 <table>
   <tr>
-    <td>Request Token URL</td>
-    <td>http://api.visualplatform.net/oauth/request_token</td>
+    <td>Request Token URL: &nbsp;</td>
+    <td><i>http://api.visualplatform.net/oauth/request_token</i></td>
   </tr>
   <tr>
-    <td>Access Token URL</td>
-    <td>http://api.visualplatform.net/oauth/access_token</td>
+    <td>Access Token URL &nbsp;</td>
+    <td><i>http://api.visualplatform.net/oauth/access_token</i></td>
   </tr>
   <tr>
-    <td>Authorize URL</td>
-    <td>http://api.visualplatform.net/oauth/authorize</td>
+    <td>Authorize URL &nbsp;</td>
+    <td><i>http://api.visualplatform.net/oauth/authorize</i></td>
   </tr>
 </table>
 
@@ -68,6 +68,7 @@ You can find more information on how to use OAuth 1.0a with the 23 API in the [O
 At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of services, which means that most web-programming languages already has one of more implementations to handle both the process, the communication and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 
 We've also created a set of samples on how to authenticate you application and communicate with the 23 API in a few common languages: 
+
 * (PHP samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/php/]
 * (Ruby samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/]
 * (Python samples)[http://github.com/23/DeveloperDocumentation/tree/master/lib/python/]

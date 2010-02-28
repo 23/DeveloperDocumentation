@@ -46,7 +46,7 @@ The API uses an [OAuth 1.0a](http://oauth.net)-based method for authenticating r
 
 Generally, some requests can [made anonymously](#anonymous-access), but whenever your application needs to read unpublished data or update or add new data, authentication is required. This is done by setting up `consumer key` and a `consumer secret` for you application, and then by having an existing user authorize your access. When this is done, you'll have an additional `access token` and am `access token secret` which will be used alongside your consumer credentials to sign all requests.
 
-All interaction with the OAuth authentication process in done through the generic domain `http://api.visualplatform.net/oauth/*` or through your site's own `http://videos.example.com/oauth/*`. We encourage you to use the generic domain, since this will handle domain changes gracefully and will allow you to reuse code. Requests to `http://api.visualplatform.net/oauth/access_token` will return the `domain` to use for all subsequent requests to the API ([more](oauth#domain)).
+All interaction with the OAuth authentication process in done through a generic domain, `http://api.visualplatform.net/oauth/*`, or through your site's own domain, `http://videos.example.com/oauth/*`. We encourage you to use the generic domain, since this will handle domain changes gracefully and will allow you to reuse code. Requests to `http://api.visualplatform.net/oauth/access_token` will return the `domain` to use for all subsequent requests to the API ([more](oauth#domain)).
 
 <table>
   <tr>
@@ -63,7 +63,7 @@ All interaction with the OAuth authentication process in done through the generi
   </tr>
 </table>
 
-You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.
+*You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.*
 
 At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of services, which means that most web-programming languages already has one of more implementations to handle both the process, the communication and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 

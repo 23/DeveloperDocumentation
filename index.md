@@ -67,9 +67,9 @@ All interaction with the OAuth authentication process in done through a generic 
 
 <b>You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.</b>
 
-At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of services, which means that most web-programming languages already has one of more implementations to handle both the process, the communication and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
+At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of other services, which means that most web-programming languages already has one or more implementations to handle all necessary communication including both the authentication process and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 
-We've also created a set of samples on how to authenticate you application and communicate with the 23 API in a few common languages: 
+We've also created a set of samples on how to authenticate your application and communicate with the 23 API in a few common languages: 
 
 * [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 * [Ruby samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)

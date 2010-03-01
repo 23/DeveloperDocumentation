@@ -1,14 +1,14 @@
 # OAuth set-up and flow
 
-[OAuth](http://oauth.net) is a secure, open protocol, which specifies a standard way to access protected data on different websites. Roughly, the protocol outlines a) a method for letting users grant an application access to a web service API, and b) a method for authorize requests with these credentials.
+[OAuth](http://oauth.net) is a secure, open protocol, which specifies a standard way to access protected data on different websites. Roughly, the protocol outlines 1) a method for letting users grant an application access to a web service API, and 2) how to communicate using these credentials.
 
-The 23 API uses OAuth to authorize access for a few different reasons:
+[The 23 API](index) uses OAuth to authorize access for a few different reasons:
 
 * It's [well-documented](http://oauth.net/documentation/).
 * It's [open and secure](http://oauth.net/advisories/).
-* It's used by Google, Yahoo, Twitter and multiple other web services. This means that developers may be able to re-use code, and that it's almost certain that they'll be able to re-use one of [the stable OAuth libraries for most popular programming languages](http://oauth.net/code/).
+* It's used by Google, Yahoo, Twitter and multiple other web services. This means that developers may be able to re-use code, and that it's almost certain that they'll be able to re-use one of [the stable OAuth libraries available for most popular programming languages](http://oauth.net/code/).
 
-The purpose of the document is not to introduce OAuth; for this there are [great beginner's guides](http://oauth.net/documentation/getting-started/). Instead this document outlines [how The 23 API works with OAuth](#signing-and-making-requests); illustrates [the authorization flow](#using-oauth-step-by-step); and it lists some [sample scripts](#sample-scripts) to help you get started. 
+The purpose of the document is not to introduce OAuth; for this there are [great beginner's guides](http://oauth.net/documentation/getting-started/). Instead this document outlines [how the API works with OAuth](#signing-and-making-requests); illustrates [the authorization flow](#using-oauth-step-by-step); and it lists some [sample scripts](#sample-scripts) to help you get started. 
 
 ---
 
@@ -28,20 +28,22 @@ Make absolutely sure that you never share either secret with an untrusted party.
 
 ## Setting up your application
 
-Applications are set up by users of [23 Video](http://www.23video.com) or [Visualblog](http://www.visualblog.net). To create an application:
+To get a consumer key and a consumer secret, you'll need to create an application. Applications are set up by users of [23 Video](http://www.23video.com) or [Visualblog](http://www.visualblog.net). To create an application:
 
-* Go to you site and log in.
+* Go to your site and log in.
 * Go to _Your profile_ and click the _Manage applications_ link.
 * Hit the _Create your own application_ button.
-* Now, fill in and submit the form to get your consumer key and consumer secret. When you set up the application, you'll be able to select a [permission levels](index#permission-level) for the app. The level cannot be changed at a later stage.
+* Now, fill in and submit the form to get your consumer key and consumer secret. When you set up your application, you'll be able to select a [permission levels](index#permission-level) for the app. The level cannot be changed at a later stage.
 
 Your new consumer key is only valid on your own site domain. If you need a generic consumer key/token, which can be used across sites, [contact 23](mailto:team@23company.com).
 
 ### Privileged credentials
 
-Applications set up in this manner can only gain _read_, _write_, or _admin_ access. To gain [_super_-level access](index#permission-level) to a site, a special consumer key must be set up by the **the site's owner**. 
+Applications set up in this manner can only gain _read_, _write_, or _admin_ access. To gain [_super_-level access](index#permission-level) to a site, a special consumer key must be set up **by the site's owner**. 
 
-These privileged credentials are set up under _Settings_ &rarr; _API and Applications_. The set of credentials include both consumer key/secret and an access token with an access token secret. Thus, when you're using privileged credentials to access the API, you won't need to go through the user authentication process. Even if this seems like a simple choice in many cases, we encourage that you only use priviled credentials when it is required by your. application.
+These privileged credentials are set up under _Settings_ &rarr; _API and Applications_. 
+
+The set of credentials includes both consumer key/secret and an access token/access token secret. Thus, when you're using privileged credentials to access the API, you won't need to go through the user authentication process. Even if this seems like a nice shortcut in many cases, we encourage that you only use priviled credentials when it is required by your application.
 
 ---
 

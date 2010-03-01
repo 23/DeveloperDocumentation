@@ -63,6 +63,10 @@ We encourage you to use the generic domain, since this will handle domain change
     <td>Authorize URL &nbsp;</td>
     <td><i>http://api.visualplatform.net/oauth/authorize</i></td>
   </tr>
+  <tr>
+    <td>Signing mechanism &nbsp;</td>
+    <td><i>HMAC-SHA1</i></td>
+  </tr>
 </table>
 
 <br/>
@@ -123,6 +127,7 @@ Methods for listing and managing comments.
 Methods for uploading and managing videos and photos.
 
 * [/api/photo/upload](photo-upload): Upload a new photo or video.
+* [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
 * [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/delete](photo-delete): Delete a photo or video
 * [/api/photo/update](photo-update): Update the meta data of a photo or video
@@ -359,7 +364,7 @@ The entire flow is described [here](browser-based-uploads)
 
 ## Sample implementations and testing
 
-You can test and debug access to The 23 API using our Tcl- and PHP-based [command-line tools](command-line). These scripts also serve as sample implementations of how you might interact with the API.
+You can test and debug access to The 23 API using [our sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/). These scripts also serve an exmaple on how you might interact with the API.
 
 
 ---

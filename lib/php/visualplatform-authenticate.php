@@ -17,7 +17,7 @@
 $args = $_SERVER['argv'];
 $consumer_key = $args[1];
 $consumer_secret = $args[2];
-$domain = "api.dev.visualplatform.net";
+$domain = "api.visualplatform.net";
 
 
 // Load dependencies
@@ -58,11 +58,14 @@ fclose($handle);
 $response = $consumer->sendRequest("http://".$domain."/oauth/access_token", array("oauth_verifier" => $oauth_verifier), "GET");
 $data     = $response->getDataFromBody();
 
+
 if (empty($data['oauth_token']) || empty($data['oauth_token_secret'])) {
     throw new HTTP_OAuth_Consumer_Exception_InvalidResponse(
        'Failed getting token and token secret from response', $response
     );
 }
+
+print_r($data);
 
 $consumer->setToken($data['oauth_token']);
 $consumer->setTokenSecret($data['oauth_token_secret']);

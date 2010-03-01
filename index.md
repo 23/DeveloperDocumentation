@@ -52,7 +52,7 @@ We encourage you to use the generic domain, since this will handle domain change
 
 <table>
   <tr>
-    <td>Request Token URL: &nbsp;</td>
+    <td>Request Token URL &nbsp;</td>
     <td><i>http://api.visualplatform.net/oauth/request_token</i></td>
   </tr>
   <tr>

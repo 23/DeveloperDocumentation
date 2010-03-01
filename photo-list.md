@@ -2,6 +2,7 @@
 
 Return a list of photos or videos.
 
+Note, that since the `photo_id` and `album_id` parameters might both be matched to the `token`, you won't be able to use `album_id` and `photo_id` together. If `album_id` is set, the `photo_id` parameter is ignored.
 
 ### Parameters
 
@@ -14,6 +15,8 @@ Return a list of photos or videos.
     </td>
     <td>
       List content from a single album or channel. Also see <tt>token</tt>.
+      <br/>
+      If this parameter is set, `photo_id` is ignored.
     </td>
   </tr>
 
@@ -23,6 +26,8 @@ Return a list of photos or videos.
     </td>
     <td>
       Limit to a single photo or video. Also see <tt>token</tt>.
+      <br/>
+      If `album_id` is set, this parameter is ignored.
     </td>
   </tr>
 

@@ -1,4 +1,4 @@
-# API Method: /api/photo/upload
+# API Method: /api/photo/replace
 
 Replace a photo or update the thumbnail of a video. 
 

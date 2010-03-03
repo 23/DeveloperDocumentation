@@ -1,4 +1,4 @@
-# OAuth set-up and flow
+# OAuth and the 23 API
 
 [OAuth](http://oauth.net) is a secure, open protocol, which specifies a standard way to access protected data on different websites. Roughly, the protocol outlines 1) a method for letting users grant an application access to a web service API, and 2) how to communicate using these credentials.
 
@@ -16,7 +16,9 @@ The purpose of the document is not to introduce OAuth; for this there are [great
 
 This section details the specifics of the OAuth implementation in the 23 API. For newcomers to OAuth, the following sections introduces some tricky parts of the protocol and gives an example of the authorization and communication flow.
 
-The 23 API only supports [the 1.0a version](http://oauth.net/core/1.0a/) of the OAuth protocol. All signatures my be included in a HTTP `Authorization` header, and only [the HMAC-SHA1 signature method](http://oauth.net/core/1.0a/#anchor15) is supported.
+The 23 API only supports [the 1.0a version](http://oauth.net/core/1.0a/) of the OAuth protocol. All signatures my be included in a HTTP `Authorization` header, and only [the HMAC-SHA1 signature method](http://oauth.net/core/1.0a/#anchor15) is supported. 
+
+To get help testing your request signatures, check out [this wonderful tool](http://hueniverse.com/2008/10/beginners-guide-to-oauth-part-iv-signing-requests/).
 
 #### Endpoints
 
@@ -52,7 +54,7 @@ When talking to the 23 API you'll be using these URLs:
 
 #### Domains
 
-It's clear from these URLs that you'll be changing domain context half-way through the process. This switch is handled by reading the response body from `acess_token`:
+It's clear from these URLs that you'll be changing domain context half-way through the process. This switch is handled by reading the response body from `access_token`:
 
     oauth_token=12-N9KNOy8ec3BWqCtR75HZ
       &oauth_token_secret=yndh3sxnlasykxpsmposzrjeyUptdumfwax0rjdobqimkytvsdkacztlFqzvyfgh

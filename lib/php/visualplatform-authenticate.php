@@ -37,7 +37,7 @@ $consumer = new HTTP_OAuth_Consumer($consumer_key, $consumer_secret);
 $consumer->accept($request);
 
 // 1. Get request token
-$consumer->getRequestToken("http://".$domain."/oauth/request_token", "http://my.example.com/callback", array(), "GET");
+$consumer->getRequestToken("http://".$domain."/oauth/request_token", "oob", array(), "GET");
 
 // 2. Build authorize url and redirect the user
 $authorize_url = $consumer->getAuthorizeUrl("http://".$domain."/oauth/authorize");
@@ -56,7 +56,6 @@ fclose($handle);
 //    request manually.)
 
 $response = $consumer->sendRequest("http://".$domain."/oauth/access_token", array("oauth_verifier" => $oauth_verifier), "GET");
-print($response->getBody());
 $data     = $response->getDataFromBody();
 
 

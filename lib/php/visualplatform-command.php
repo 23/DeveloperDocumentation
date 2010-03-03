@@ -43,7 +43,9 @@ require_once 'HTTP/Request2.php';
 
 // Set up HTTP request
 $httpRequest = new HTTP_Request2;
+print_r($httpRequest->addUpload('file', '/tmp/x.png'));
 $httpRequest->setHeader('Accept-Encoding', '.*');
+$httpRequest->setParameters($params); 
 $request = new HTTP_OAuth_Consumer_Request;
 $request->accept($httpRequest);
 
@@ -52,7 +54,7 @@ $consumer = new HTTP_OAuth_Consumer($visualplatform_config['key'], $visualplatfo
 $consumer->accept($request);
 
 // Make request
-$response = $consumer->sendRequest("http://" . $visualplatform_config['domain'] . $endpoint, $params, "POST");
+$response = $consumer->sendRequest("http://" . $visualplatform_config['domain'] . $endpoint, array(), "POST");
 $data = $response->getBody();
 
 if ( !$output_php_p ) {

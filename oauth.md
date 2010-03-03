@@ -66,11 +66,11 @@ Armed with this response, you'll know which domain (`domain`) to query and which
 
 #### Callbacks 
 
-During the autorization stage, you can specify control your user's log-in flows by setting a callback when calling `request_token`. For example, set `oauth_callback=http://mysite.com/callback` to control how the user is redirected back to your application after authorizing your request token. When `oauth_callback` is omitted or set to `oob` (_out of band_), the end user is given a `oauth_verifier` which your application must manually ask for in order get exchange your request token for an access token. The callback process is [outlined in the OAuth docs](http://oauth.net/core/1.0a/#provider_redirects).
+During the authorization stage, you can control your user's log-in flows by setting a callback when calling `request_token`. For example, set `oauth_callback=http://mysite.com/callback` to control how the user is redirected back to your application after authorizing your request token. When `oauth_callback` is omitted or set to `oob` (_out of band_), the end user is given a `oauth_verifier` which your application must manually ask for in order to exchange your request token for an access token. The callback process is [outlined in the OAuth docs](http://oauth.net/core/1.0a/#provider_redirects).
 
 #### Multipart forms
 
-In accordance with [the OAuth request normalization specification](http://oauth.net/core/1.0a/#rfc.section.9.1.1) to following parts of the request must be included in the signature:
+In accordance with [the OAuth request normalization specification](http://oauth.net/core/1.0a/#rfc.section.9.1.1) the following parts of the request must be included in the signature:
 
 * All parameters in the OAuth HTTP Authorization header except `realm` and `oauth_signature`.
 * All parameters from the URLs in the query part of an HTTP GET.
@@ -93,7 +93,7 @@ There are three key/secret pairs to be aware of in OAuth:
 * A **request token** is retrieved by the application alone, and is used to ensure that an end user authorizes your application to submit API operations on the user's behalf. Its associated **request token secret** is used to sign requests during the authorization process.
 * An **access token** is retrieved after the end user has authorized your application. Its associated **access token secret** is used to sign all requests on behalf of the user and thus verify the identity of both the application and the user.
 
-The end-goal of the authorization process where user grant application access is an access token and secret. Once this process is completed, only the consumer key/token and the access key/token is needed to make and asign requests.
+The end-goal of the authorization process where the user grants application access is an access token and secret. Once this process is completed, only the consumer key/token and the access key/token is needed to make and assign requests.
 
 Make absolutely sure that you never share either secret with an untrusted party. The OAuth protocol is set up to allow interactions without ever exchanging secrets or passwords, and the security of the communication hinges on secrets actually being secret.
 
@@ -116,7 +116,7 @@ Applications set up in this manner can only gain _read_, _write_, or _admin_ acc
 
 These privileged credentials are set up under _Settings_ &rarr; _API and Applications_. 
 
-The set of credentials includes both consumer key/secret and an access token/access token secret. Thus, when you're using privileged credentials to access the API, you won't need to go through the user authentication process. Even if this seems like a nice shortcut in many cases, we encourage that you only use priviled credentials when it is required by your application.
+The set of credentials includes both consumer key/secret and an access token/access token secret. Thus, when you're using privileged credentials to access the API, you won't need to go through the user authentication process. Even if this seems like a nice shortcut in many cases, we encourage that you only use privileged credentials when it is absolutely required by your application.
 
 
 ---
@@ -133,7 +133,7 @@ In this sample, we have a consumer with:
 
 ### Step 1: Get a request token
 
-Using your consumer credentialt, retrieve a request token from the provider:
+Using your consumer credentials, retrieve a request token from the provider:
 
     GET http://api.visualplatform.net/oauth/request_token
     Authorization: OAuth realm="http://api.visualplatform.net/", 

@@ -4,6 +4,10 @@ Sign a visitor session. This method is designed to work alongside the "Authentic
 
 A session times out when it hasn't been used for 20 minutes. After this, the user must have his or her session re-signed.
 
+### OAuth
+
+This is a special case of how the 23 API uses the OAuth protocol. Since you're redirecting your client to an API method, [your OAuth signature](oauth#signing-and-making-requests) (including keys, nonce, timestamp etc) must be included in the query string for a GET request.
+
 
 ### Parameters
 

@@ -16,7 +16,13 @@ The purpose of the document is not to introduce OAuth; for this there are [great
 
 This section details the specifics of the OAuth implementation in the 23 API. For newcomers to OAuth, the following sections introduces some tricky parts of the protocol and gives an example of the authorization and communication flow.
 
-The 23 API only supports [the 1.0a version](http://oauth.net/core/1.0a/) of the OAuth protocol. All signatures my be included in a HTTP `Authorization` header, and only [the HMAC-SHA1 signature method](http://oauth.net/core/1.0a/#anchor15) is supported. 
+The 23 API only supports [the 1.0a version](http://oauth.net/core/1.0a/) of the OAuth protocol, and `oauth_callback` is required when asking for a request token.
+
+We only support the [the HMAC-SHA1 signature method](http://oauth.net/core/1.0a/#anchor15).
+
+OAuth parameters and signatures may be included either in an HTTP `Authorization` header, in the post body of a POST request, or in the query string of a GET request. Please note, that you won't be able to include _any_ parameters in the URL query string during POST requests.
+
+
 
 To get help testing your request signatures, check out [this wonderful tool](http://hueniverse.com/2008/10/beginners-guide-to-oauth-part-iv-signing-requests/).
 

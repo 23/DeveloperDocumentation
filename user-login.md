@@ -2,9 +2,16 @@
 
 Log in a an existing user.
 
-### OAuth
+### Redirect and OAuth
 
-This is a special case of how the 23 API uses the OAuth protocol. Since you're redirecting your client to an API method, [your OAuth signature](oauth#signing-and-making-requests) (including keys, nonce, timestamp etc) must be included in the query string for a GET request.
+To use this method, presign the absolute URL to this method with your OAuth credentials. The signature must be included directly in the query string. For example:
+
+    http://videos.example.com/api/user/login?user_id=12345&oauth_nonce=asyiuyasd
+      &oauth_signature_method=HMAC-SHA1&oauth_timestamp=1267735409&oauth_consumer_key=...
+
+To log in the user, redirect your client to the URL. 
+
+This is a special case of how the 23 API uses the OAuth protocol. Since you're redirecting your client directly to an API method, [your OAuth signature](oauth#signing-and-making-requests) (including keys, nonce, timestamp etc) must be included in the query string for a GET request.
 
 
 ### Parameters

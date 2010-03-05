@@ -1,6 +1,6 @@
 # The 23 API
 
-This document describes the REST API for Visualplatform and [23 Video](http://www.23video.com). Please note that access to the API depends on your product and subscription -- and that it may not be available to you. [Contact us](#any-questions) if you have questions in this regard.
+This document describes the REST API for Visualplatform, [23 Video](http://www.23video.com) and  [Visualblog](http://www.visualblog.net). Please note that access to the API depends on your product and subscription -- and that it may not be available to you. [Contact us](#any-questions) if you have questions in this regard.
 
 This API is designed to be used in an array of different contexts: Browser- and JavaScript-based mashups with 23's products; customized video players in Adobe Flash or Adobe Flex; selecting and embedding content into a content management system; single sign-on or paywall-based access to 23 Video; or full-fledged video or community sites using 23 Video as their backend. 
 

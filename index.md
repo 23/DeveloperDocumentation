@@ -259,8 +259,8 @@ Finally, you can get raw JSON data without any unnecessary syntactic sugar using
 
 A number of API methods (including for example [/api/photo/list](photo-list), [/api/user/list](user-list) and [/api/tag/list](tag-list)) returns a list of objects. These lists will often only return a subset of the data, and the programmer will need to handle pagination explicitly. This is done using `p` and `size`:
 
-* `size`: Number of items to return with each request. Where nothing else is stated, the default value for `size` is _20_ and the maximum value is _100_.
-* `p`: The page number to return. The default value is _1_ and given a size of _20_, `p=2` will return items _21_ through _40_, and `p=5` will yield items _81_ through _100_.
+* `size`: Number of items to return with each request. Where nothing else is stated, the default value for `size` is *20* and the maximum value is *100*.
+* `p`: The page number to return. The default value is *1* and given a size of *20*, `p=2` will return items *21* through *40*, and `p=5` will yield items *81* through *100*.
 
 Any request offering pagination will include the `p` and `size` parameters in their responses, and in addition a third property is included:
  

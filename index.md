@@ -112,8 +112,8 @@ Whenever a request to the API fails, a response detailing the exception is retur
 Methods for creating and managing albums and channels.
 
 * [/api/album/create](album-create): Create a new channel or album
-* [/api/album/list](album-list): List and search through channels or albums
 * [/api/album/delete](album-delete): Delete a channel or album
+* [/api/album/list](album-list): List and search through channels or albums
 * [/api/album/update](album-update): Update the meta data of a channel or album
 
 ### Comments
@@ -126,19 +126,20 @@ Methods for listing and managing comments.
 
 Methods for uploading and managing videos and photos.
 
-* [/api/photo/upload](photo-upload): Upload a new photo or video.
-* [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
-* [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/delete](photo-delete): Delete a photo or video
-* [/api/photo/update](photo-update): Update the meta data of a photo or video
 * [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
+* [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
+* [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
+* [/api/photo/update](photo-update): Update the meta data of a photo or video
+* [/api/photo/upload](photo-upload): Upload a new photo or video.
 
 ### Sessions
 
 Methods controlling access to a closed site and for implementing single sign-on.
 
-* [/api/session/sign](session-sign): Grant access to a client
+* [/api/session/get-token](session-get-token): Get a token for authorizing a visitor's access to a site.
+* [/api/session/redeem-token](session-redeem-token): Get access to a site through a [session token](session-get-token).
 
 ### Site
 
@@ -164,9 +165,10 @@ Methods for testing communication with the API
 Methods for managing users.
 
 * [/api/user/create](user-create): Create a new user account
-* [/api/user/login](user-login): Log the client in to a user account
-* [/api/user/get](user-get): Get user details
+* [/api/user/get-login-token](user-get-login-token): Get a token for logging in a user.
 * [/api/user/list](user-list): List users
+* [/api/user/login](user-login): Log the client in to a user account
+* [/api/user/redeem-login-token](user-redeem-login-token): Log in a user using a [login token](user-get-login-token).
 
 <div style="display:none;">
 ### Video player

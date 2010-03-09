@@ -1,4 +1,5 @@
 # API Method: /api/photo/upload
+# flags=comments
 
 Upload a new file to the site.
 

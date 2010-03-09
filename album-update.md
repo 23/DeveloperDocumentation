@@ -1,4 +1,5 @@
 # API Method: /api/album/update
+# flags=comments
 
 Update the meta data for a channels
 

@@ -1,4 +1,5 @@
 # OAuth and the 23 API
+# flags=comments
 
 [OAuth](http://oauth.net) is a secure, open protocol, which specifies a standard way to access protected data on different websites. Roughly, the protocol outlines 1) a method for letting users grant an application access to a web service API, and 2) how to communicate using these credentials.
 
@@ -247,8 +248,6 @@ We've created a set of samples on how to authenticate your application and commu
 * [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 * [Python samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/python/)
 * [Ruby samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
-
----
 
 
 

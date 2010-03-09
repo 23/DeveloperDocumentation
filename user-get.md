@@ -1,4 +1,5 @@
 # API Method: /api/user/get
+# flags=comments
 
 Get information about an existing user.
 

@@ -1,4 +1,5 @@
 # API Method: /api/photo/replace
+# flags=comments
 
 Replace a photo or update the thumbnail of a video. 
 

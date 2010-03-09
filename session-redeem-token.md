@@ -1,4 +1,5 @@
 # API Method: /api/session/redeem-token
+# flags=comments
 
 Grant access to a site using a [pre-authenticated session access token](session-get-token). 
 

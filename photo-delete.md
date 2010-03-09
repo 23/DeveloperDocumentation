@@ -1,4 +1,5 @@
 # API Method: /api/photo/delete
+# flags=comments
 
 
 Delete a photo or video.

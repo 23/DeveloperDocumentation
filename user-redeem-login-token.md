@@ -1,4 +1,5 @@
 # API Method: /api/user/redeem-login-token
+# flags=comments
 
 Log in a user using a [pre-authenticated user login token](user-get-login-token). 
 

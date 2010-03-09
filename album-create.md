@@ -1,4 +1,5 @@
 # API METHOD: /api/album/create
+# flags=comments
 
 Create a new album or channel.
 

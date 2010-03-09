@@ -1,4 +1,5 @@
 # API Method: /api/photo/redeem-upload-token
+# flags=comments
 
 Upload a photo or video using a [pre-authenticated upload token](photo-get-upload-token). 
 

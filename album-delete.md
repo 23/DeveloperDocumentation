@@ -1,4 +1,5 @@
 # API Method: /api/album/delete
+# flags=comments
 
 Delete an album or channel.
 

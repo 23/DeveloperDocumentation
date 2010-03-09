@@ -1,4 +1,5 @@
 # API Method: /api/photo/list
+# flags=comments
 
 Return a list of photos or videos.
 

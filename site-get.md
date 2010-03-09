@@ -1,4 +1,5 @@
 # API Method: /api/site/get
+# flags=comments
 
 Get information about the current site.
 

@@ -1,4 +1,5 @@
 # API Method: /api/echo
+# flags=comments
 
 Echo service which allows implementers to test authentication details and the connection to the API server.
 

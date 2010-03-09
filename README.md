@@ -1,4 +1,5 @@
 # Documentation for 23's Visualplatform API
+# flags=comments
 
 * [The actual API documentation](http://community.23video.com/api/)
 * [API documentation and samples on Github](http://github.com/23/DeveloperDocumentation)

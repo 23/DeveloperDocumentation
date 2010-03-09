@@ -1,4 +1,5 @@
 # API Method: /api/album/list
+# flags=comments
 
 Get a list of albums or channels.
 

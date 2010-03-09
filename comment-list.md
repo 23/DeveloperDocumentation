@@ -1,4 +1,5 @@
 # API Method: /api/comment/list
+# flags=comments
 
 Get a list of comments.
 

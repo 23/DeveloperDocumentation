@@ -1,4 +1,5 @@
 # API: Error codes and descriptions
+# flags=comments
 
 Whenever a request to the API fails, a response detailing the exception is returned. The response includes an error code and a detailed description of the error. 
 

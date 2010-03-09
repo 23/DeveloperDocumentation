@@ -1,4 +1,5 @@
 # API Method: /api/photo/update
+# flags=comments
 
 Update the meta data -- including title, description, tags, channel/album and publish status -- of a photo or video.
 

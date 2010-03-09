@@ -1,4 +1,5 @@
 # API Method: /api/user/get-login-token
+# flags=comments
 
 Get a login token, which can in turn be used to log a user in to your site. The token is valid for 15 minutes.
 

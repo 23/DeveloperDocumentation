@@ -1,4 +1,5 @@
 # API: Browser-based uploads
+# flags=comments
 
 Browser-based uploading consists of two API methods:
 

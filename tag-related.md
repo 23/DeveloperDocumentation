@@ -1,4 +1,5 @@
 # API Method: /api/tag/related
+# flags=comments
 
 Get a list of related tags. 
 

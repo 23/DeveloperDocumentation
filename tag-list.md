@@ -1,4 +1,5 @@
 # API Method: /api/tag/list
+# flags=comments
 
 Get a list of tags.
 

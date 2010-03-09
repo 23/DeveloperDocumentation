@@ -1,4 +1,5 @@
 # The 23 API
+# flags=comments
 
 This document describes the REST API for Visualplatform, [23 Video](http://www.23video.com) and  [Visualblog](http://www.visualblog.net). Please note that access to the API depends on your product and subscription -- and that it may not be available to you. [Contact us](#any-questions) if you have questions in this regard.
 

@@ -1,4 +1,5 @@
 # API Method: /api/photo/get-upload-token
+# flags=comments
 
 Pre-authenticate an upload, allowing your client to upload directly to 23's servers from a web browser.
 

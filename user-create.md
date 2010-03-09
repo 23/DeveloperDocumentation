@@ -1,4 +1,5 @@
 # API Method: /api/user/create
+# flags=comments
 
 Set up a new user in the site.
 

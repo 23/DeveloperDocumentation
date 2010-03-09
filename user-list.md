@@ -1,4 +1,5 @@
 # API Method: /api/user/list
+# flags=comments
 
 Get a list of users
 

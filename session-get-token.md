@@ -1,4 +1,5 @@
 # API Method: /api/session/get-token
+# flags=comments
 
 Get a session access token, which can in turn be used to sign a user's session using [/api/session/redeem-token](session-redeem-token). The return must be used within 15 minutes.
 

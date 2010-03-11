@@ -8,6 +8,5 @@ As a part of [the api documentation](http://community.23video.com/api), we're ma
 * [API documentation and samples on Github](http://github.com/23/DeveloperDocumentation)
 * [All sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/)
 * [PHP scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
-* [Python scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/python/)
 * [Ruby scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
 

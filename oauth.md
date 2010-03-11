@@ -246,9 +246,7 @@ Signature base string:
 We've created a set of samples on how to authenticate your application and communicate with the 23 API:
 
 * [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
-* [Python samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/python/)
 * [Ruby samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
-
 
 
 <script>createIndex('OAuth Flow', 'h2');</script>

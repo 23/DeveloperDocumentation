@@ -1,4 +1,18 @@
 #!/usr/bin/env ruby
+
+# Instructions:
+#
+# Requires preauthentication through visualplatform-authenticate.rb
+#
+# Call the script:
+#  ./visualplatform-command.rb <api_method> <param1> <value1> <param2> <value2>
+#
+# For example
+#  ./visualplatform-command.rb /api/echo iam here title "My title"
+#
+# This sample also shows how to build multipart requests and upload
+# files to 23 Video through Ruby.
+
 require 'rubygems'
 gem 'oauth'
 gem 'mime'

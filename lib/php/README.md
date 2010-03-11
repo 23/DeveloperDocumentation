@@ -38,3 +38,10 @@ After authenticating your application, you can invoke an API method from the com
 The script also handles the special case of getting data in a native PHP data structure by parsing JSON data from the API:
 
     ./visualplatform-command.php <endpoint> <param1> <value1> ... format php
+    
+For example
+
+    ./visualplatform-command.rb /api/echo iam here title "My title"
+
+
+This sample also shows how to build multipart requests and upload files to 23 Video through PHP.

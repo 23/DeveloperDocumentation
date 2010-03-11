@@ -7,6 +7,12 @@
 #
 # Call the script:
 #  ./visualplatform-command.php <endpoint> <param1> <value1> <param2> <value2>
+#
+# For example
+#  ./visualplatform-command.php /api/echo iam here title "My title"
+#
+# This sample also shows how to build multipart requests and upload
+# files to 23 Video through PHP.
 
 require('visualplatform.config.php');
 

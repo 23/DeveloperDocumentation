@@ -11,7 +11,12 @@ The sample is available through...
 
 ## Requirements
 
-These scripts require Ruby and the `oauth` ruby gem to be installed.
+These scripts require Ruby and for the following Ruby gems to be installed:
+
+    oauth
+    mime
+    mime-types
+    yaml
 
 
 ## Authentication
@@ -29,4 +34,11 @@ After you've completed the step prescribed in the script, you'll find a new file
 
 After authenticating your application, you can invoke an API method from the command-line by running:
 
-    visualplatform-command.rb <endpoint> <param1> <value1> <param2> <value2> ...
+    visualplatform-command.rb <api_method> <param1> <value1> <param2> <value2> ...
+
+For example
+
+    ./visualplatform-command.rb /api/echo iam here title "My title"
+
+
+This sample also shows how to build multipart requests and upload files to 23 Video through Ruby.

@@ -11,7 +11,7 @@ The master policy file in the root folder (`/crossdomain.xml`) does not grant ex
     // Obtain access to all API methods
     Security.loadPolicyFile('http://videos.example.com/api/crossdomain.xml');
 
-    // Only obtain access to user-specific API-,ethods
+    // Only obtain access to user-specific API-methods
     Security.loadPolicyFile('http://videos.example.com/api/user/crossdomain.xml');
 
     // Obtain access to any photos or videos hosted in the tree with id=7340

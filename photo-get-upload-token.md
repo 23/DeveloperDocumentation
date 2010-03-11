@@ -3,7 +3,7 @@
 
 Pre-authenticate an upload, allowing your client to upload directly to 23's servers from a web browser.
 
-This method can be used to pre-authenticated uploads to a site without proxying them through your servers and the API. The flow is described in detail in the <a href="browser-based-uploads">Browser-based uploads</a> section of the API documentation, but in general terms this method will return a token which can be included in a standard HTML form (or even a more advanced Flash uploader) to upload photos or videos directly to 23's servers.
+This method can be used to pre-authenticated uploads to a site without proxying them through your servers and the API. The flow is described in detail in the <a href="browser-based-uploads">Browser-based uploads</a> section of the API documentation, but in general terms this method will return a token which can be included in a standard HTML form (or even a more advanced Flash uploader, see [cross-domain policies](crossdomain)) to upload photos or videos directly to 23's servers.
 
 
 ### Parameters

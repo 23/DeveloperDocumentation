@@ -9,6 +9,8 @@ Browser-based uploading consists of two API methods:
 
 This approach is designed to allow API consumers to pre-authenticate uploads to their 23 sites -- and enables applications to let users upload photos and videos to 23 using browser-based uploading. This scheme allows you to accept uploads from users without ever having to proxy or host the files from you server. You should opt for this approach to uploading if you do not want to host or store the uploaded files.
 
+This process also allow for mulri-file uploads via Flash, Gears, Silverlight, HTML5 and other similar endeavors. For Flash specifically, you will need to be aware of [our cross-domain acces policies](crossdomain) or host the `.swf` file on your 23 Video domain.
+
 ---
 
 ## 1. Post upload meta data to 23

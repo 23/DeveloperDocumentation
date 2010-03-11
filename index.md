@@ -36,6 +36,8 @@ And [return](#response-formats) something like this:
 
 The API expects UTF-8 formatted input and will return in UTF-8 as well.
 
+The API is accessible via Adobe Flash and Adobe Flex. If you need to access it from a foreign domain, have a look at [our cross-domain acces policies](crossdomain).
+
 The next section describes [how to authenticate your requests](#authentication), and you should also have a look at the limits and possibilities of [anonymous access to the api](#anonymous-access).
 
 ---

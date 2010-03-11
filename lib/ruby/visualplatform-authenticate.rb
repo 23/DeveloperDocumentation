@@ -26,7 +26,7 @@ ARGV.options do |o|
   
   o.set_summary_indent('  ')
   o.banner =    "Usage: #{script_name} [OPTIONS]"
-  o.define_head "Create a yaml file for yammer oauth"
+  o.define_head "Create a yaml file for Visual Platform OAuth"
   o.separator   ""
   o.separator   "[-k] and [-s] options are mandatory"
   o.separator   ""
@@ -35,9 +35,9 @@ ARGV.options do |o|
        "Yaml output file",
        "Default: #{OPTIONS[:outfile]}")     { |OPTIONS[:outfile]| }
   o.on("-k", "--key=val", String,
-       "Consumer key for Yammer app")       { |key| OPTIONS[:key] = key}
+       "Consumer key for Visual Platform app")       { |key| OPTIONS[:key] = key}
   o.on("-s", "--secret=val", String,
-       "Consumer secret for Yammer app")    { |secret| OPTIONS[:secret] = secret}
+       "Consumer secret for Visual Platform app")    { |secret| OPTIONS[:secret] = secret}
   
   o.separator ""
 
@@ -68,6 +68,12 @@ consumer:
 access:
   token: #{access_token.token}
   secret: #{access_token.secret}
+api:
+  debug: true
+  endpoint: http://#{response['domain']}
+  domain: #{response['domain']}
+  user_id: #{response['user_id']}
+  oauth: #{VP_OAUTH}
 EOT
 
 File.open(OPTIONS[:outfile], "w") do |f|

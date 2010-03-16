@@ -41,38 +41,10 @@ Get a list of comments.
 
   <tr>
     <td>
-      <tt>object_user_id</tt> 
-    </td>
-    <td>
-      List comments to a specific user's channels, album, photos and videos.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
       <tt>comment_user_id</tt> 
     </td>
     <td>
       List comments by a specific user.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <tt>replies_to_user_id</tt> 
-    </td>
-    <td>
-      List comment replies to a specific user.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <tt>cover_photo_format</tt> 
-    </td>
-    <td>
-      Format/size of the photo or video thumbnail returned for the comments.<br/>
-      <i>Default:</i> <tt>quad50</tt>
     </td>
   </tr>
 
@@ -137,17 +109,9 @@ To get the `email` property associated with a comment the required [permission l
       <comment comment_id="417329" object_id="417254" object_type="photo" 
         user_id="" name="Ernest Hemmingway" email="ernest@example.com" 
         pretty_date="February 26, 2009" pretty_time="08:02 PM" short_date="26. Feb" 
-        truncated_name="Ernest Hemmingway" creation_date_ansi="2009-02-26 20:02:06" 
-        object_url="/photo/417254" object_title="Kylling med pasta, gorgonzola og bacon" 
-        cover_photo_id="417254" cover_photo_download="/792/417254/bkrPunr6agkdxl2netsrTvlypehdeuvz/quad50" 
-        within_edit_timeframe_p="0">
+        truncated_name="Ernest Hemmingway" creation_date_ansi="2009-02-26 20:02:06">
             <content_text> (plain text version of the comment) </content_text>
             <content> (html version of the comment) </content>
-            <truncated_content> (truncated version of the content) </truncated_content>
-            <object_content> (content of the object matched to the comment) </object_content>
-            <object_content_text> 
-              (plain text version of the content of the object matched to the comment) 
-            </object_content>
         </comment>
     </response>
 
@@ -165,15 +129,8 @@ To get the `email` property associated with a comment the required [permission l
          "pretty_time": "04:00 PM", "short_date": "26. Feb", 
          "truncated_name": "Lasse", "creation_date_ansi": "2009-02-26 16:00:58", 
          "object_url": "/photo/417254", 
-         "object_title": "Kylling med pasta, gorgonzola og bacon", 
-         "cover_photo_id": "417254", 
-         "cover_photo_download": "/792/417254/bkrPunr6agkdxl2netsrTvlypehdeuvz/quad50", 
-         "within_edit_timeframe_p": 0, 
          "content_text": " (plain text version of the comment) ", 
          "content": " (html version of the comment) ", 
-         "truncated_content": " (truncated version of the content) ", 
-         "object_content": " (content of the object matched to the comment) ", 
-         "object_content_text": " (plain text version of the object content) "
         }],
       "p": "1",
       "size": "1",

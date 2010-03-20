@@ -120,6 +120,17 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>audio_p</tt>
+    </td>
+    <td>
+      Limit to either audio content or not audio content.<br/>
+      <i>Default:</i> <i>(empty)</i><br/>
+      <i>Valid values:</i> <i>(empty)</i>, <tt>0</tt> or <tt>1</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>video_encoded_p</tt>
     </td>
     <td>
@@ -205,7 +216,7 @@ To acces unpublished videos or content of hidden channels the client must provid
         creation_date__date="February 16, 2010" creation_date__time="06:13 PM" 
         original_date_ansi="2010-02-16 17:13:32" original_date__date="February 16, 2010" 
         original_date__time="05:13 PM" view_count="0" number_of_comments="0" number_of_albums="0" 
-        number_of_tags="0" photo_rating="" number_of_ratings="0" video_p="1" video_encoded_p="1" 
+        number_of_tags="0" photo_rating="" number_of_ratings="0" video_p="1" audio_p="0" video_encoded_p="1" 
         video_length="55.248" text_only_p="0" user_id="17488" username="__hidden" display_name="Hidden User" 
         user_url="/user/__hidden/" original_width="640" original_height="480" original_size="22124" 
         original_download="/7340/60433/zoyZt0ugycplufdd4eiiaaJhwxgkpime/original" 
@@ -262,7 +273,7 @@ To acces unpublished videos or content of hidden channels the client must provid
         "original_date_ansi": "2010-02-16 17:13:32", "original_date__date": "February 16, 2010", 
         "original_date__time": "05:13 PM", "view_count": "0", "number_of_comments": "0", 
         "number_of_albums": "0", "number_of_tags": "0", "photo_rating": "", 
-        "number_of_ratings": "0", "video_p": 1, "video_encoded_p": 1, "video_length": "55.248", 
+        "number_of_ratings": "0", "video_p": 1, "audio_p": 0, "video_encoded_p": 1, "video_length": "55.248", 
         "text_only_p": 0, "user_id": "17488", "username": "__hidden", "display_name": "Hidden User", 
         "user_url": "/user/__hidden/", "original_width": "640", "original_height": "480", 
         "original_size": "22124", "original_download": "/7340/60433/5622160c758c5d18423d31153458b5f7/original", 

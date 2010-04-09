@@ -49,13 +49,26 @@ require_once 'HTTP/Request2.php';
 
 // Set up HTTP request
 $httpRequest = new HTTP_Request2;
-//print_r($httpRequest->addUpload('file', '/tmp/x.png'));
 $httpRequest->setHeader('Accept-Encoding', '.*');
-//$httpRequest->setParameters($params); 
-$request = new HTTP_OAuth_Consumer_Request;
-$request->accept($httpRequest);
+
+// Handle file uploads
+if (isset($params['file'])) {
+   // Content of multipart forms isn't signed according to the OAuth specs.
+   // We handle this case by manually building the content of the multipart request
+   // and then sending no params to the OAuth lib for signing.
+   foreach ($params as $key => $val) {
+     if ($key=='file') {
+        $httpRequest->addUpload($key, $val);
+     } else {
+        $httpRequest->addPostParameter($key, $val);
+     }
+   }
+   $params = array();
+}
 
 // Set up OAuth consumer
+$request = new HTTP_OAuth_Consumer_Request;
+$request->accept($httpRequest);
 $consumer = new HTTP_OAuth_Consumer($visualplatform_config['key'], $visualplatform_config['secret'], $visualplatform_config['token'], $visualplatform_config['token_secret']);
 $consumer->accept($request);
 

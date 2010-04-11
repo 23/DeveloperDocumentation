@@ -1,11 +1,11 @@
-# Ruby sample for 23's Visualplatform API
+# PHP sample for 23's Visualplatform API
 
 This is a sample on how to authenticate your application for and integration it with 23's Visualplatform API available at http://community.23video.com/api/.
 
 The sample is available through...
 
 * [API documentation and samples on Github](http://github.com/23/DeveloperDocumentation)
-* [All ruby sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
+* [All php sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 
 
 

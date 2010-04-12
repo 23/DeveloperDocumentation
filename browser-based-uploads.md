@@ -95,3 +95,10 @@ On upload failure, the user is sent to the same callback page. The request inclu
       upload_token=022fe6e3fb42758d6147c539727c5358af3524b1&
       error_message=The+file+type+isn't+supported
 
+---
+
+## Uploading through Flash
+
+You can use a method very similar to the method prescribed above for uploading via Adobe Flash (or equivalent technologies). In these cases, you might not be able to control or even make client-side redirects -- for example, Flash won't redirect to `return_url` after the upload.
+
+To overcome this, set `background_return_p=1` when creating the token. This will cause the callback request to be made from the server-side. You can read more about [set-up](photo-get-upload-token) and [returns](photo-redeem-upload-token) in the relevant documentation.

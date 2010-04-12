@@ -11,6 +11,7 @@ This method can be used to pre-authenticated uploads to a site without proxying 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td><tt>return_url</tt> <small>(required)</small></td><td>The URL where the user is return after both upload success and failure. See <a href="#flow">the Flow section</a> for more information.</td></tr>
+  <tr><td><tt>background_return_p</tt></td><td>Return to the callback url in the background. If this parameter is set to <tt>1</tt> the upload request will not redirect the client directly back to <tt>return_url</tt>. Instead, a request is made to <tt>return_url</tt> from the 23 servers and <a href="photo-redeem-upload-token">a plain text document in returned</a> containing status information. This option is design for uploading through clients wuch as Adobe Flash, where a client-side redirected might not be honoured.</td></tr> 
   <tr><td><tt>user_id</tt></td><td>The user's ID. If no user ID is given, the objects will be uploaded anonymously. Requires <tt>super</tt>, otherwise files are uploaded using the authenticated user.</td></tr>
   <tr><td><tt>album_id</tt></td><td>A album (or channel) ID.</td></tr>
   <tr><td><tt>title</tt></td><td>A title for the upload. All HTML tags will be stripped away from the title.</td></tr>
@@ -21,6 +22,7 @@ This method can be used to pre-authenticated uploads to a site without proxying 
   <tr><td><tt>max_uploads</tt></td><td>How many files can be uploaded using the returned token. The default is <tt>1</tt> upload; the maximum is 10</td></tr>
 </table>
 
+Any extra parameters sent to this method will be repeated in the callback request to `return_url`.
     
 
 ### Permission level 

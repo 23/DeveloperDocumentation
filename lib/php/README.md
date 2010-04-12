@@ -1,11 +1,11 @@
-# Ruby sample for 23's Visualplatform API
+# PHP sample for 23's Visualplatform API
 
 This is a sample on how to authenticate your application for and integration it with 23's Visualplatform API available at http://community.23video.com/api/.
 
 The sample is available through...
 
 * [API documentation and samples on Github](http://github.com/23/DeveloperDocumentation)
-* [All ruby sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
+* [All php sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 
 
 
@@ -16,6 +16,14 @@ These scripts require PHP and the `oauth` pear package, which can easily be inst
     pear install HTTP_OAuth-alpha
 
 (There are a number of PHP libraries for OAuth, all with their own pros and cons. We've gone for the pear script in this sample since it's easy to install, but you should have a look at [the library list](http://oauth.net/code/) to see which one suits you best.)
+
+## Important change in PEAR library
+
+The library is easy to install and fairly mature; unfortunately it doesn't handle file upload well. So if you're going to be using the `/api/photo/upload` or `/api/photo/replace` methods, you'll need to make a very small change after having installed the library: 
+
+Find your PEAR folder and in `HTTP/OAuth/Consumer/Request.php` you'll need to remove the following line (it's probably line 259)...
+
+    $this->setHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 
 ## Authentication

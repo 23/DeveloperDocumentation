@@ -5,6 +5,8 @@ Upload a photo or video using a [pre-authenticated upload token](photo-get-uploa
 
 See the documentation on [browser-based uploads](browser-based-uploads) for more information.
 
+Any extra parameters sent to this method will be repeated in the callback request to `return_url`.
+
 
 ### Parameters
 
@@ -27,3 +29,11 @@ The minimum required [permission level](index#permission-level) is:
 
 A plain, unstyled error message if the `upload_token` is invalid, consumed or expired. 
 Otherwise the client is redirected to `return_url` using the method specified in [the flow description](browser-based-uploads).
+
+If `background_return_p` was set to `1` when [retrieving the upload token](photo-get-upload-token), the callback to `return_url` is made from the server-side and one of the following information sets is returned:
+
+    ok <domain> <tree_id> <photo_id> <token> <callback_url>
+    
+Or:
+
+    error <error_message>

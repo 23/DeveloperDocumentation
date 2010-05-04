@@ -170,7 +170,6 @@ Methods for managing users.
 * [/api/user/create](user-create): Create a new user account
 * [/api/user/get-login-token](user-get-login-token): Get a token for logging in a user.
 * [/api/user/list](user-list): List users
-* [/api/user/login](user-login): Log the client in to a user account
 * [/api/user/redeem-login-token](user-redeem-login-token): Log in a user using a [login token](user-get-login-token).
 
 <div style="display:none;">

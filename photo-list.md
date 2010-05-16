@@ -53,6 +53,15 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>player_id</tt>
+    </td>
+    <td>
+      The identifier for a video player. Including the parameter will allow contextualization of the content for the specific player; for example by fitting the playflow (preroll, postroll, after text etc) based on the player.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>tag</tt>
     </td>
     <td>

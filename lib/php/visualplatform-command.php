@@ -14,7 +14,7 @@
 # This sample also shows how to build multipart requests and upload
 # files to 23 Video through PHP.
 
-require('visualplatform.config.php');
+error_reporting(E_ALL);
 
 // Get key/token from args
 $args = $_SERVER['argv'];

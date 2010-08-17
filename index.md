@@ -366,10 +366,15 @@ The entire flow is described [here](browser-based-uploads)
 ---
 
 
-## Sample implementations and testing
+## Libraries and sample implementations
 
-You can test and debug access to The 23 API using [our sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/). These scripts also serve an exmaple on how you might interact with the API.
+The 23 API is designed to be generic and accessible in just about any programming language. We are making a number of implementations and libraries available to make the interaction easier:
 
+* [.NET API library for 23 Video](http://github.com/23/23video-dotnet)
+* [PHP sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
+* [Ruby sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
+* [SharePoint Web Part for 23 Video](http://github.com/23/23video-sharepoint)
+* [All sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/)
 
 ---
 

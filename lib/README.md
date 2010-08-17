@@ -9,4 +9,6 @@ As a part of [the api documentation](http://community.23video.com/api), we're ma
 * [All sample scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/)
 * [PHP scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 * [Ruby scripts](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
+* [.NET API for 23 Video](http://github.com/23/23video-dotnet)
+* [SharePoint Web Part for 23 Video](http://github.com/23/23video-sharepoint)
 

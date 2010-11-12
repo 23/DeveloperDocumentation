@@ -353,6 +353,21 @@ The extra property `cache_time` notes when the content of the response was origi
 
 For performance reasons, we ask you to use the cached version of any request, but you will be able to ask for a non-cached version of a response either by signing your requests or by adding a `?time=<current_timestamp>` parameter to your request.
 
+---
+
+## Pingbacks
+
+You can have the API notify you of object changes on 23 Video through pingback notifications. This is done by configuring you OAuth consumer with a `Pingback URL`. A common usage for this approach is to both listen for new uploads to a site and to track the transcoding of an uploaded video.
+
+For example, you might use `http://backend.example.com/visual-pingback` and whenever a photo's or video's title, description, tags, albums, channels or encoding status changes, a HTTP POST request is sent back to the specified URL:
+
+    http://backend.example.com/visual-pingback?type=photo&photo_id=12345
+    
+Using this information, you will be able to track changes in the 23 Video backend. The pingback itself only identifies the changed object; you will need to query [/api/photo/list](photo-list) for updated information about the object.
+
+Only [`photo`](#terminology) objects are subject to pingback notifications.
+    
+
 
 ---
 
@@ -361,7 +376,7 @@ For performance reasons, we ask you to use the cached version of any request, bu
 
 Browser-based uploading is designed to allow API consumers to pre-authenticate uploads to their 23 sites -- and enables applications to let users upload photos and videos to 23 using browser-based uploading. This scheme allows you to accept uploads from users without ever having to proxy or host the files from you server. You should opt for this approach to uploading if you do not want to host or store the uploaded files.
 
-The entire flow is described [here](browser-based-uploads)
+The entire flow is described [here](browser-based-uploads).
 
 ---
 

@@ -162,6 +162,15 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>upload_token</tt>
+    </td>
+    <td>
+      An <a href="photo-redeem-upload-token">upload token</a> from a <a href="browser-based-uploads">browser-based upload</a>.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>orderby</tt>
     </td>
     <td>

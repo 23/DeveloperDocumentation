@@ -5,7 +5,11 @@ Get a session access token, which can in turn be used to sign a user's session u
 
 This procedure is designed to work alongside the _Authenticate visitors through API_ option in the site's security settings. When this option is selected, all visitors (not logged-in users) must be redirected to the site through this procedure in order to gain access to the site's content. This allows the developer full control of who is allowed in, and it is usually used for intranet sites or for sites behind a paywall.
 
-A session times out when it hasn't been used for 20 minutes. After this, the user must have his or her session re-signed.
+A session times out when it hasn't been used for 20 minutes. After this, the user must have his or her session re-signed. 
+
+If you want to force a user to be logged out after having be signed in through the signed-session mechanism, redirect the client to `/logout` on the site:
+
+    http://video.example.com/logout?return_url=http%3A%2F%2Fwww.example.com%2F
 
 ### Parameters
 

@@ -134,6 +134,7 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
 * [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
+* [/api/photo/subtitles](photo-subtitles): Retrieve subtitles for a video.
 * [/api/photo/update](photo-update): Update the meta data of a photo or video
 * [/api/photo/upload](photo-upload): Upload a new photo or video.
 

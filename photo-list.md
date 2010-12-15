@@ -38,7 +38,7 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
     </td>
     <td>
       The token for a specific video/photo or an album &minus; depending on whether <tt>photo_id</tt> or <tt>album_id</tt> is set.<br/>
-      Specifying either an <tt>album_id/token</tt> or a <tt>photo_id/token</tt> will give the client access to information about the video/photo/album/channel irregardless of permission level.
+      Specifying either an <tt>album_id/token</tt> or a <tt>photo_id/token</tt> will give the client access to information about the video/photo/album/channel irregardless of permission level. When requesting a single photo object, <a href="index#time-limited-tokens">tokens can be explicitly time-limited</a>.
     </td>
   </tr>
 

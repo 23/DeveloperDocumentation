@@ -134,9 +134,14 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/list](photo-list): List and search through photos and videos
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
 * [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
-* [/api/photo/subtitles](photo-subtitles): Retrieve subtitles for a video.
 * [/api/photo/update](photo-update): Update the meta data of a photo or video
 * [/api/photo/upload](photo-upload): Upload a new photo or video.
+
+### Sections
+
+Methods for managing and listing sections or chapters within video clips.
+
+* [/api/photo/section/list](photo-section-list): List sections within for a video.
 
 ### Sessions
 
@@ -150,6 +155,12 @@ Methods controlling access to a closed site and for implementing single sign-on.
 Methods for querying meta data about sites.
 
 * [/api/site/get](site-get): Get information about the site.
+
+### Subtitles
+
+Methods for managing and querying video subtitles and captions.
+
+* [/api/photo/subtitle/list](photo-subtitle-list): Retrieve subtitles for a video.
 
 ### Tags
 
@@ -290,6 +301,67 @@ A number of [the API methods](#methods) allow anonymous access to the public dat
 
 Of course, unpublished content on public sites and any content on non-public sites will not be available to anonymous API calls. For more information about access and permission levels, refer to [the next section](#permission-levels).
 
+
+---
+
+## Token access to photos and videos
+
+In general terms, access to photos and videos can be controlled through an identifier (`photo_id`) and a shared secret (`token`). Using a combination of these two, you will always be able to retrieve the full URL of an object. This method can be used to grant access to unpublished or hidden videos to select users, for example through an *embed* code. This approach combined with [time-limited tokens](#time-limited-tokens) allows for fine-grained control of who has access to item and when.
+
+* On publicly accessible sites, both the `photo_id` and `token` of any published photo or video is freely available through the API.
+* On closed sites, `token`s on published videos are available to visitors with their [sessions signed](session-redeem-token). 
+* All `token`s (including those to non-published videos) are available to logged-in users. This also means that the `token` for unpublished items is not available to the public without it having been explicitly shared.
+
+Put plainly:
+* If a `token` is shared, a user will always have access to an item.
+* When a video is made public, the token is too. 
+
+---
+
+## Time-limited tokens
+
+*This section is presented in draft form. The described feature hasn't been launched publicly yet.*
+
+In some cases, you will want to grant visitors time-limited access to a video or a photo. To do so you will be using [the secret `token`](#token-access-to-photo-and-videos) to generate a new and time-limited token from tree different parts:
+
+* An expiration timestamp, `expire`, in [UTC seconds after epoch](http://en.wikipedia.org/wiki/Unix_time), i.e `1292438117`. Before the expiration time, the signature is accepted. After this time, the signature is denied. 
+* The `photo_id` to identify the item, i.e. `97531`.
+* Optionally, a `start` and `end` time of the video, i.e. `30` for start time to start up the video 30 seconds in. The end time might be kept empty to allow the video to run its full length or could be set to `90` to stop the video stream 90 seconds in. 
+
+These parameters are collated alphabetically into a string, which is in turn transformed into a HMAC-SHA1 hash using the secret `token` (i.e. `123abc`). 
+
+    // When `start` and `end` isn't used
+    expire1292438117photo_id97531
+    // When `start` and `end` is included
+    end90expire1292438117photo_id97531start30
+    // When `end` is empty
+    endexpire1292438117photo_id97531start30
+    
+The collated string is signed with `token`:
+
+    hmac_sha1('123abc', 'expire1292438117photo_id97531')
+     = 5ea04282ea3c4a9beca6234606006b56e0cb923d
+    hmac_sha1('123abc', 'end90expire1292438117photo_id97531start30')
+     = 55e1edd79178fdc6b0c77d94ce2189bd65163207
+    hmac_sha1('123abc', 'endexpire1292438117photo_id97531start30')
+     = 95d9750fbbc98f76c60de11343581e18a301c65e
+
+This final token can now be used with URLs and API calls where specified. If the time-limited token is used, `expire` and possibly `start` and `end` must also be passed along as parameters. However, make sure you never include the secret `token` in such requests.
+
+Examples of how such request might look include these:
+
+    // Download HD version
+    http://video.example.com/123/97531/
+     5ea04282ea3c4a9beca6234606006b56e0cb923d/video_hd?expire=1292438117
+    // Mobile redirect
+    http://video.example.com/m/d/97531/
+     5ea04282ea3c4a9beca6234606006b56e0cb923d?expire=1292438117
+    // Get info through API
+    http://video.example.com/api/photo/
+     list?photo_id=97531&token=5ea04282ea3c4a9beca6234606006b56e0cb923d&expire=1292438117
+    
+    
+
 ---
 
 ## Permission levels
@@ -367,11 +439,9 @@ For example, you might use `http://backend.example.com/visual-pingback` and when
 Using this information, you will be able to track changes in the 23 Video backend. The pingback itself only identifies the changed object; you will need to query [/api/photo/list](photo-list) for updated information about the object.
 
 Only [`photo`](#terminology) objects are subject to pingback notifications.
-    
 
 
 ---
-
 
 ## Browser-based uploads
 

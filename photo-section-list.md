@@ -21,7 +21,8 @@ List sections within for a video.
       <tt>token (required)</tt>
     </td>
     <td>
-      The corresponding token for the photo_id.
+      The corresponding token for the photo_id.<br/>
+      The token <a href="index#time-limited-tokens">may be explicitly time-limited</a> in which case <tt>expire</tt> becomes a required parameter.
     </td>
   </tr>
 </table>    

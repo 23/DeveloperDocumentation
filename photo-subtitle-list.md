@@ -1,4 +1,4 @@
-# API Method: /api/photo/subtitles
+# API Method: /api/photo/subtitle/list
 # flags=comments
 
 Return a list of available subtitles for a video in a given format
@@ -21,7 +21,8 @@ Return a list of available subtitles for a video in a given format
       <tt>token (required)</tt>
     </td>
     <td>
-      The corresponding token for the photo_id.
+      The corresponding token for the photo_id.<br/>
+      The token <a href="index#time-limited-tokens">may be explicitly time-limited</a> in which case <tt>expire</tt> becomes a required parameter.
     </td>
   </tr>
 
@@ -95,5 +96,5 @@ For non-public sites, the minimum level is:
       "size": "1",
       "total_count": "0",
       "site": { ... },
-      "endpoint": "/api/photo/subtitles"
+      "endpoint": "/api/photo/subtitle/list"
     }

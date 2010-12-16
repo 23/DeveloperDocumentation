@@ -17,11 +17,27 @@ These scripts require PHP and the `oauth` pear package, which can easily be inst
 
 (There are a number of PHP libraries for OAuth, all with their own pros and cons. We've gone for the pear script in this sample since it's easy to install, but you should have a look at [the library list](http://oauth.net/code/) to see which one suits you best.)
 
-## Important change in PEAR library
+
+## Important change in PEAR library 
+
+### Version 0.1.16 and later
 
 The library is easy to install and fairly mature; unfortunately it doesn't handle file upload well. So if you're going to be using the `/api/photo/upload` or `/api/photo/replace` methods, you'll need to make a very small change after having installed the library: 
 
-Find your PEAR folder and in `HTTP/OAuth/Consumer/Request.php` you'll need to remove the following line (it's probably line 259)...
+Find your PEAR folder and in `HTTP/OAuth/Consumer/Request.php`. In this file, lines 215 through 219 should be replaced with the following piece of code:
+
+    $request_headers = $this->getHTTPRequest2()->getHeaders();
+    if ($this->getMethod() == 'POST' && $request_headers['content-type']=='application/x-www-form-urlencoded') {
+        $body = $this->getHTTPRequest2()->getBody();
+        $body = str_replace('+', '%20', $body);
+        $this->getHTTPRequest2()->setBody($body);
+    }
+
+A bug report describing the problem is available here: https://pear.php.net/bugs/bug.php?id=17653
+
+### Version 0.1.17 and earlier
+
+If you're using an earlier version of the OAuth library, another change will be necessary. In your PEAR folder, locate `HTTP/OAuth/Consumer/Request.php` and remove the following line (it's probably line 259)...
 
     $this->setHeader('Content-Type', 'application/x-www-form-urlencoded');
 

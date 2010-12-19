@@ -320,8 +320,6 @@ Put plainly:
 
 ## Time-limited tokens
 
-*This section is presented in draft form. The described feature hasn't been launched publicly yet.*
-
 In some cases, you will want to grant visitors time-limited access to a video or a photo. To do so you will be using [the secret `token`](#token-access-to-photo-and-videos) to generate a new and time-limited token from tree different parts:
 
 * An expiration timestamp, `expire`, in [UTC seconds after epoch](http://en.wikipedia.org/wiki/Unix_time), i.e `1292438117`. Before the expiration time, the signature is accepted. After this time, the signature is denied. 
@@ -346,24 +344,25 @@ The collated string is signed with `token`:
     hmac_sha1('123abc', 'endexpire1292438117photo_id97531start30')
      = 95d9750fbbc98f76c60de11343581e18a301c65e
 
-The resulting hash and `expire` (separated by a dash, `-`) are concatenated into the *time-limited token* such as these for the three cases listed here:
+The resulting hash and `expire` along with possibly `start` and `end` (separated by a dash, `-`) are concatenated into the *time-limited token* such as these for the three cases listed here:
 
+    // Simple version with just an expire
     5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-    55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117
-    95d9750fbbc98f76c60de11343581e18a301c65e-1292438117
+    // Token with expiration, start and end
+    55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117-30-90
+    // Variation width start and empty end
+    95d9750fbbc98f76c60de11343581e18a301c65e-1292438117-30-
 
-This final token can be used in place of [the traditional token](#token-access-to-photos-and-videos) with URLs and API calls where specified. If you have signed the token with start and end times `start` and `end` must also be passed along as parameters.
-
-Examples of how such request might look include these:
+This final token can be used in place of [the traditional token](#token-access-to-photos-and-videos) with URLs and API calls where specified. Examples of how such request might look include these:
 
     // Download HD version
     http://video.example.com/123/97531/
      5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117/video_hd
     // Mobile redirect
-    http://video.example.com/m/d/97531/5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
+    http://video.example.com/m/d/97531/55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117-30-90
     // Get info through API
     http://video.example.com/api/photo/list?photo_id=97531
-      &token=55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117&start=30&end=90
+      &token=95d9750fbbc98f76c60de11343581e18a301c65e-1292438117-30-
       
 An time-limited embed code for a single video might look like this:
 

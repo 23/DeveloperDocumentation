@@ -110,6 +110,13 @@ Whenever a request to the API fails, a response detailing the exception is retur
 
 ## Methods
 
+### Analytics reporting
+
+Methods for creating and managing albums and channels.
+
+* [/api/analytics/report/event](analytics-report-event): Report an event to the analytics engine.
+* [/api/analytics/report/play](analytics-report-play): Report a playback to the analytics engine.
+
 ### Albums or channels
 
 Methods for creating and managing albums and channels.

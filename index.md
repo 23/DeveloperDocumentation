@@ -148,7 +148,11 @@ Methods for uploading and managing videos and photos.
 
 Methods for managing and listing sections or chapters within video clips.
 
-* [/api/photo/section/list](photo-section-list): List sections within for a video.
+* [/api/photo/section/create](photo-section-create): Create a section within a video.
+* [/api/photo/section/delete](photo-section-delete): Delete a video section.
+* [/api/photo/section/list](photo-section-list): List sections within a video.
+* [/api/photo/section/set-thumbnail](photo-section-set-thumbnail): Set the thumbnail for a specified section within a video.
+* [/api/photo/section/update](photo-section-update): Update a section within a video.
 
 ### Sessions
 

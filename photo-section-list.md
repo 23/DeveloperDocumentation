@@ -12,7 +12,7 @@ List sections within for a video.
       <tt>photo_id (required)</tt>
     </td>
     <td>
-      The ID of the video to fetch subtitles for.
+      The ID of the video to fetch sections for.
     </td>
   </tr>
 
@@ -21,7 +21,7 @@ List sections within for a video.
       <tt>token (required)</tt>
     </td>
     <td>
-      The corresponding token for the photo_id.<br/>
+      The corresponding token for the <tt>photo_id</tt>.<br/>
       The token <a href="index#time-limited-tokens">may be explicitly time-limited</a> in which case <tt>expire</tt> becomes a required parameter.
     </td>
   </tr>

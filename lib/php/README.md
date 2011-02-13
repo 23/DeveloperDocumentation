@@ -20,7 +20,7 @@ These scripts require PHP and the `oauth` pear package, which can easily be inst
 
 ## Important change in PEAR library 
 
-### Between version 0.1.17 - 0.2.1
+### Between versions 0.1.17 and 0.2.1
 
 The library is easy to install and fairly mature; unfortunately it doesn't handle file upload well. So if you're going to be using the `/api/photo/upload` or `/api/photo/replace` methods, you'll need to make a very small change after having installed the library: 
 

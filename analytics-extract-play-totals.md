@@ -20,8 +20,8 @@ Extract total values from a site, a single photo or a series of photos from the 
       <tt>photo_id</tt>
     </td>
     <td>
-      Limited the extracted totals to one or more photo IDs. To limit to multiple photo IDs, separate photo IDs with commas.<br/>
-      If no <tt>photo_id</tt> value is supplied, the default behaviour is to extract totals from the entire site.
+      Limits the extracted totals to one or more photo IDs. To limit to multiple photo IDs, separate photo IDs with commas.<br/>
+      If no <tt>photo_id</tt> value is supplied, the default behavior is to extract totals from the entire site.
     </td>
   </tr>
 </table>

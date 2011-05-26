@@ -1,4 +1,4 @@
-# API Method: /api/distribution/ios/register-device
+# API Method: /api/distribution/ios/unregister-device
 # flags=comments
 
 Unregister an already [registered](distribution-iso-register-device) iOS subscription for push notications.

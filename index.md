@@ -7,6 +7,34 @@ This API is designed to be used in an array of different contexts: Browser- and 
 
 ---
 
+## How are you planning to use the API?
+
+The documention details a number of different tools available for programmers. Depending on how you will be integrating against the API you likely will not be using all of the available bits and pieces &minus; and for that reason it's important to ask *how* you will be using the API. In many cases, you won't need to worry about OAuth and access tokens. 
+
+A few examples:
+
+**_Setting up a designed videosite with my own branding, my own content, on my own domain_**:<br/>
+This is the core promise of 23 Video, so you won't even need to use the API to achieve this goal. Consult [the design guide](/design/) for information on how to get started.
+
+**_Re-using data from a public site to display thumbnails or embed videos_**:<br/>
+In this case, you can skip OAuth entirely, an simply extract [JSON](http://reinvent.23video.com/api/photo/list?format=json) or [XML](http://reinvent.23video.com/api/photo/list?format=xml) lists of content. Be sure to to understand [response formats](#response-formats), [pagination](#pagination) and the limitation of [anonymous acess](#anonymous-access) -- and then simply refer to [the method documentation](#methods).
+
+**_Using the 23 site as a private archive for video_**:<br/>
+Here, you will need OAuth signatures in order to sign requests to the API. You need to be confortable with [the flow of OAuth](oauth), find a [good OAuth library](http://oauth.net/code/) in your language of choice, and know the [the API methods](#methods). You should create a set of [_privileged credentials_](#permission-levels) from the backend of your site under _Settings_ &rarr; _API & Application_ to access the API.
+
+**_Allowing user uploads to the 23 site_**:<br/>
+Again, you need OAuth signatures (see above), but you can use [_privileged credentials_](#permission-levels) from  _Settings_ &rarr; _API & Application_ in the site's backend. You have a choice between [server-based](photo-upload) or [browser-based](browser-based-uploads) uploads, and you should understand [the concept of pingbacks](#pingbacks).
+
+**_Having the user log in to their 23 site site to grant you access_**:<br/>
+This is the only case where you will need to worry about [the OAuth authentication flow](oauth) (since you can use [_privileged credentials_](#permission-levels) otherwise). Along with everything else, you need to decide on a [permission level](#permission-levels) to authenticate users at.
+
+**_Giving visitors access to content through SSO or a paywall_**:<br/>
+There are two different ways of granting user access: [Time-limited tokens](#time-limited-tokens) grants access to a single video for a limited time. And [Session signing](session-get-token) will grant them access to the content on an entire site. The token approach is designed for securely sharing a piece of content while the session aproach is designed to grant users full access to a site, it's content and the features afforded by the 23 Video templating engine.
+
+As is clear from this list, the 23 API can be used to achieve vastly different goals in different contexts. If you unsure on how to approach an integration, [just ask us](developers@23company.com).
+
+---
+
 ## Terminology
 
 For legacy reasons all 23 APIs reference the object type `photo`. However, depending on the service the API is used with, the `photo` object type is interchangeable with text posts (on <a href="http://visualblog.net">Visualblog</a>), with photos (on <a href="http://visualblog.net">Visualblog</a>), and with videos (on <a href="http://www.23video.com">23 Video</a> and <a href="http://visualblog.net">Visualblog</a>).
@@ -74,11 +102,11 @@ We encourage you to use the generic domain, since this will handle domain change
 
 <br/>
 
-<b>You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document.</b>
+<b>You can find more information on how to use OAuth 1.0a with the 23 API in the [OAuth set-up and flow](oauth) document. Please refer to this document if you at all unsure about how to use OAuth with this API.</b>
 
 At first glance, the OAuth process might seem intimidating, but it has a major upside: It's used by Google, Yahoo, Twitter and tons of other services, which means that most web-programming languages already has one or more implementations to handle all necessary communication including both the authentication process and all request to the 23 API. You can check out which libraries are available to you at the [OAuth Code](http://oauth.net/code/) page.
 
-We've also created a set of samples on how to authenticate your application and communicate with the 23 API in [PHP samples](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
+We've also created a set of samples on how to authenticate your application and communicate with the 23 API in [PHP](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/) and [Ruby](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/).
 
 ---
 
@@ -130,7 +158,23 @@ Methods for creating and managing albums and channels.
 
 Methods for listing and managing comments.
 
-* [/api/comment/list](comment-list): List comments
+* [/api/comment/add](comment-add): Add a comment
+* [/api/comment/delete](comment-delete): Delete an existing comment
+* [/api/comment/list](comment-list): List or search for comments
+
+### Distributions
+
+Methods for managing distribution points
+
+* [/api/distribution/ios/push-notification](distribution-ios-push-notification): Send push notifications to all registered iOS devices.
+* [/api/distribution/ios/register-device](distribution-ios-register-device): Register an iOS device such as an iPhone, iPad or iPod Touch for push notications.
+* [/api/distribution/ios/unregister-device](distribution-ios-unregister-device): Unregister an already registered iOS subscription for push notications.
+
+### Licenses
+
+Methods for listing and managing licenses.
+
+* [/api/license/list](license-list): List licenses.
 
 ### Photos and videos
 
@@ -143,6 +187,13 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/replace](photo-replace): Replace a photo or update the thumbnail of a video.
 * [/api/photo/update](photo-update): Update the meta data of a photo or video
 * [/api/photo/upload](photo-upload): Upload a new photo or video.
+
+### Players
+
+Methods for listing and use video players.
+
+* [/api/player/list](player-list): List available video players
+* [/api/player/settings](player-setting): Request specific player settings
 
 ### Sections
 
@@ -194,15 +245,6 @@ Methods for managing users.
 * [/api/user/get-login-token](user-get-login-token): Get a token for logging in a user.
 * [/api/user/list](user-list): List users
 * [/api/user/redeem-login-token](user-redeem-login-token): Log in a user using a [login token](user-get-login-token).
-
-<div style="display:none;">
-### Video player
-
-Methods for listing and embedding video players
-
-* [/api/player/list](player-list): List available video players.
-* [/api/player/embed](player-embed): Get a video embed code for a specific player.
-</div>
 
 
 
@@ -469,7 +511,7 @@ Only [`photo`](#terminology) objects are subject to pingback notifications.
 
 Browser-based uploading is designed to allow API consumers to pre-authenticate uploads to their 23 sites -- and enables applications to let users upload photos and videos to 23 using browser-based uploading. This scheme allows you to accept uploads from users without ever having to proxy or host the files from you server. You should opt for this approach to uploading if you do not want to host or store the uploaded files.
 
-The entire flow is described [here](browser-based-uploads).
+** The entire flow is detailed and exemplified in [Using browser-based with 23 Video](browser-based-uploads).**
 
 ---
 

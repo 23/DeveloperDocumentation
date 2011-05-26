@@ -40,16 +40,29 @@ For non-public sites, the minimum level is:
 
 ### Example XML Response
 
-
     <response status="ok" permission_level="anonymous" 
-      total_count="3" cached="1" cache_time="1291469279">
-      <section section_id="101674" start_time="0" title="Earth" 
-        description="" link="/video/101353/101674/earth" />
-      <section section_id="102000" start_time="180" title="Wind" 
-        description="" link="/video/101353/102000/wind" />
-      <section section_id="101661" start_time="381" title="... and Fire" 
-        description="" link="/video/101353/101661/and-fire" />
+      total_count="6" cached="1" cache_time="1296413456">
+      <section section_id="7890" start_time="0" 
+        title="It was the best of times" 
+        link="/video/12345/7890/it-was-the-best-of-times" 
+        thumbnail_photo_id="12345" thumbnail_tree_id="7340" 
+        thumbnail_token="71a669eee625655a86cebcbad92e043" 
+        quad100_download="/7340/12345/71a669eee625655a86cebcbad92e043/quad100" 
+        quad50_download="/7340/12345/71a669eee625655a86cebcbad92e043/quad50" 
+        standard_download="/7340/12345/71a669eee625655a86cebcbad92e043/standard" 
+        portrait_download="/7340/12345/71a669eee625655a86cebcbad92e043/portrait" 
+        medium_download="/7340/12345/71a669eee625655a86cebcbad92e043/medium" 
+        small_download="/7340/12345/71a669eee625655a86cebcbad92e043/small" 
+        quad16_download="/7340/12345/71a669eee625655a86cebcbad92e043/quad16" 
+        large_download="/7340/12345/71a669eee625655a86cebcbad92e043/large" 
+        quad75_download="/7340/12345/71a669eee625655a86cebcbad92e043/quad75">
+        <description>A multi-
+          line 
+          description</description>
+      </section>
+      ...
     </response>
+
     
 ### Example JSON Response
 
@@ -57,17 +70,27 @@ For non-public sites, the minimum level is:
       "status": "ok", 
       "permission_level":"anonymous",
       "cached":"1",
-      "cache_time":"1291469615",
+      "cache_time":"1296413646",
       "sections":[
-        {"section_id": "101674", "start_time": "0", "title": "Earth", 
-         "description": "", "link": "/video/101353/101674/earth"},
-        {"section_id": "102000", "start_time": "180", "title": "Wind", 
-         "description": "", "link": "/video/101353/102000/wind"},
-        {"section_id": "101661", "start_time": "381", "title": "... and Fire", 
-         "description": "", "link": "/video/101353/101661/and-fire"}],
+        {"section_id": "12345", "start_time": "0", 
+         "title": "It was the best of times", 
+         "link": "/video/12345/12345/it-was-the-best-of-times", 
+         "thumbnail_photo_id": "12345", "thumbnail_tree_id": "7340", 
+         "thumbnail_token": "71a669eee625655a86cebcbad92e043", 
+         "quad100_download": "/7340/12345/71a669eee625655a86cebcbad92e043/quad100", 
+         "quad50_download": "/7340/12345/71a669eee625655a86cebcbad92e043/quad50", 
+         "standard_download": "/7340/12345/71a669eee625655a86cebcbad92e043/standard", 
+         "portrait_download": "/7340/12345/71a669eee625655a86cebcbad92e043/portrait", 
+         "medium_download": "/7340/12345/71a669eee625655a86cebcbad92e043/medium", 
+         "small_download": "/7340/12345/71a669eee625655a86cebcbad92e043/small", 
+         "quad16_download": "/7340/12345/71a669eee625655a86cebcbad92e043/quad16", 
+         "large_download": "/7340/12345/71a669eee625655a86cebcbad92e043/large", 
+         "quad75_download": "/7340/12345/71a669eee625655a86cebcbad92e043/quad75", 
+         "description": "A multi-\nline \ndescription"
+        }, ...],
       "p": "1",
       "size": "1",
-      "total_count": "3",
-      "site": { ... },
+      "total_count": "6",
+      "site": {...},
       "endpoint": "/api/photo/section/list"
     }

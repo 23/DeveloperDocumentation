@@ -1,4 +1,4 @@
-# API Method: /api/analtics/report/play
+# API Method: /api/analytics/report/play
 # flags=comments
 
 Report an event back to the analytics engine. 

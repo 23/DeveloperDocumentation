@@ -62,10 +62,11 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
-      <tt>tag</tt>
+      <tt>tags</tt>
     </td>
     <td>
-      Search for one or more tags. To search for multiple tags, just include multiple <tt>?tag=...</tt> parameters.
+      Search for one or more tags. 
+      To search for multiple tags, separate tags with spaces. Multi-word tags can be quotes with <tt>"</t>.
     </td>
   </tr>
 
@@ -188,6 +189,15 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
       Order of the objects in the response.<br/>
       <i>Default:</i> <tt>desc</tt><br/>
       <i>Valid values:</i> <tt>desc</tt> and <tt>asc</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>license_id</tt>
+    </td>
+    <td>
+      The license associated with the content item. See [/api/license/list](license-list) for information on available values.
     </td>
   </tr>
 

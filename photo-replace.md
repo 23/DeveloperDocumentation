@@ -10,8 +10,16 @@ Please note, that you won't be able to replace an actual video on [23 Video](htt
 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>file</tt> <small>(required)</small></td><td>The photo file to upload.</td></tr>
   <tr><td><tt>photo_id</tt> <small>(required)</small></td><td>The photo or video to replace.</td></tr>
+  <tr><td><tt>file</tt></small></td><td>The photo file to replace a photo with, or to use as a thumbnail for a video.</td></tr>
+  <tr>
+    <td>
+      <tt>time</tt>
+    </td>
+    <td>
+      When replacing the thumbnail of a video, you can extract the thumb from a specific part of the video (i.e. <tt>40.2</tt>). Also, have a look at <a href="photo-frame">/api/photo/frame</a>.
+    </td>
+  </tr>
 </table>
 
     

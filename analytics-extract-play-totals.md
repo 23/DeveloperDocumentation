@@ -39,8 +39,9 @@ Analytics extraction endpoints do not support XML output formatting.
 
 ### Example JSON Response
 
-Notes:
-*   The <tt>date</tt> field of <tt>daily</tt> is the number of milliseconds since the UNIX epoch in the UTC timezone.
+Notes on specific output values:
+
+*   The <tt>date</tt> field of <tt>daily</tt> is the number of milliseconds since the UNIX epoch in the UTC timezone. This is chosen to leverage native in-browser JavaScript transformation of data.
 *   The <tt>hourly</tt> array of <tt>absolute</tt> contains 24 objects describing an interval of one hour starting at 00:00-01:00 UTC
 *   The <tt>playthrough</tt> array of <tt>absolute</tt> contains 101 decimal values describing the percentage of plays that have reached this given point
 

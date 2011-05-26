@@ -73,7 +73,6 @@ Notes on specific output values:
               "downloadedBytes": 899000228.0,
               "downloads": 40.0,
               "events": {
-              
               },
               "finishes": 4.0,
               "loads": 46.0,

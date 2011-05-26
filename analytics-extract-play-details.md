@@ -62,7 +62,7 @@ The minimum required [permission level](index#permission-level) is:
 
 ### Example XML Response
 
-Analytics extraction endpoints do not support XML output formatting
+Analytics extraction endpoints do not support XML output formatting.
 
 ### Example JSON Response
 

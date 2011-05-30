@@ -16,6 +16,17 @@ Extract a details list of all photos on a specific site from the analytics engin
     <td>The ending date of the range from which to get photo details.</td>
   </tr>
   <tr>
+    <td><tt>photo_id</tt></td>
+    <td>A comma-separated list of <tt>photo_id</tt>s to include in the stats. When this parameter is omitted, all stats on the site are included.</td>
+  </tr>
+  <tr>
+    <td><tt>exclude_deleted_p</tt></td>
+    <td>
+      Exclude stats for deleted objects.<br/>
+      <i>Default:</i> <tt>0</tt>
+    </td>
+  </tr>
+  <tr>
     <td>
       <tt>orderby</tt>
     </td>

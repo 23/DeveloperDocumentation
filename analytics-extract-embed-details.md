@@ -62,6 +62,14 @@ Extract a detailed list of all embed sources on a specific site from the analyti
       Number of objects to include in the response. See [pagination](index#pagination) for details.
     </td>
   </tr>
+  <tr>
+    <td>
+      <tt>url_limit</tt>
+    </td>
+    <td>
+      Number of URL's to return for every domain. When not supplied, all URL's for a domain will be returned.
+    </td>
+  </tr>
 </table>
 
 ### Permission level 
@@ -85,6 +93,7 @@ Analytics extraction endpoints do not support XML output formatting.
         "domains": [
           {
             "domain": "www.facebook.com"
+            "urlCount": 56,
             "urls": [
               {
                 "url": "http://www.facebook.com/",

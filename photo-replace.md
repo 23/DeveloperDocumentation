@@ -1,9 +1,7 @@
 # API Method: /api/photo/replace
 # flags=comments
 
-Replace a photo or update the thumbnail of a video. 
-
-Please note, that you won't be able to replace an actual video on [23 Video](http://www.23video.com), only the thumbnail associated with the video.
+Replace a photo, replace a video or update the thumbnail of a video. 
 
 
 ### Parameters

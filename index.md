@@ -176,6 +176,26 @@ Methods for listing and managing licenses.
 
 * [/api/license/list](license-list): List licenses.
 
+### Live Events <small>(closed beta)</small>
+
+Methods for creating and managing live events.
+
+* [/api/liveevent/create](liveevent-create): Create a new live event.
+* [/api/liveevent/delete](liveevent-delete): Delete a live event.
+* [/api/liveevent/list](liveevent-list): List one or more live events.
+* [/api/liveevent/update](liveevent-update): update a live event.
+
+### Live Event Streams <small>(closed beta)</small>
+
+Methods for creating and managing live event video streams.
+
+* [/api/liveevent/stream/create](liveevent-stream-create): Create a new live event video stream.
+* [/api/liveevent/stream/delete](liveevent-stream-delete): Delete a live event video stream.
+* [/api/liveevent/stream/list](liveevent-stream-list): List one or more live events video stream.
+* [/api/liveevent/stream/record](liveevent-stream-record): Start recording a live events video stream.
+* [/api/liveevent/stream/stop](liveevent-stream-stop): Stop recording a live events video stream.
+* [/api/liveevent/stream/update](liveevent-stream-update): Update a live event video stream.
+
 ### Photos and videos
 
 Methods for uploading and managing videos and photos.

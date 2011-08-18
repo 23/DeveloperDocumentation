@@ -162,6 +162,14 @@ Methods for listing and managing comments.
 * [/api/comment/delete](comment-delete): Delete an existing comment
 * [/api/comment/list](comment-list): List or search for comments
 
+### Coordinates (or maps)
+
+Methods for managing and listing geographic coordanates and maps associates with photos or videos.
+
+* [/api/photo/coordinate/add](photo-coordinate-add): Add a new geographic coordinate to a photo or video.
+* [/api/photo/coordinate/delete](photo-coordinate-delete): Delete a geographic coordinate associated with a photo or video.
+* [/api/photo/coordinate/list](photo-coordinate-list): List coordiates associates with one or more photos or videos.
+
 ### Distributions
 
 Methods for managing distribution points

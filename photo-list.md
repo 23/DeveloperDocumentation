@@ -163,10 +163,30 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>has_coordinates_p</tt>
+    </td>
+    <td>
+      Filter results by whether or not a geographic coordinate has been associated with the photo or video.
+      <i>Default:</i> <i>(empty)</i><br/>
+      <i>Valid values:</i> <i>(empty)</i>, <tt>0</tt> or <tt>1</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>upload_token</tt>
     </td>
     <td>
       An <a href="photo-redeem-upload-token">upload token</a> from a <a href="browser-based-uploads">browser-based upload</a>.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>related_to_photo_id</tt>
+    </td>
+    <td>
+      Search for related `photo` objects.
     </td>
   </tr>
 

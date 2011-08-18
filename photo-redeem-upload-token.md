@@ -16,7 +16,23 @@ Any extra parameters sent to this method will be repeated in the callback reques
   <tr><td><tt>upload_token</tt> <small>(required)</small></td><td>The token returned by a call to <a href="photo-get-upload-token">/api/photo/get-upload-token</a></td></tr>
 </table>
 
-    
+### Parameters for Resumable.js
+
+This API methods support an extra set of parameters designed to work with [Resumable.js](https://github.com/23/Resumable.js), an [open sourced](http://www.23developer.com/opensource) JavaScript library for providing multiple simultaneous, stable, fault-tolerant and resumable uploads via the HTML5 File API released by 23.
+
+To handle the state of upload chunks, a number of extra parameters are sent along with such requests:
+
+* `resumableChunkNumber`: The index of chunk in the current upload. First chunk is 1 (no base-0 counting here).
+* `resumableChunkSize`: The chunk size in bytes.
+* `resumableTotalSize`: The total file size in bytes.
+* `resumableIdentifier`: A unique identifier for the file contained in the request.
+
+API methods expect all chunks of a file to be uploaded before the video is added to the archive. When the last chunk's upload completes, the messages listed in the *Returns* section applies. For all other chunk, HTTP status codes control the flow:
+
+* `200`: The chunk was accepted and correct. No need to re-upload.
+* `500`: The file for which the chunk was uploaded is not supported, cancel the entire upload.
+* _Anything else_: Something went wrong, but try reuploading the file.
+
 
 ### Permission level 
 

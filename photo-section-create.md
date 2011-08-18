@@ -54,20 +54,20 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="write" 
-      message="The section was created cached="0"/>
+      message="The section was created" cached="0"/>
 
     
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message":"The section was created,
+      "message":"The section was created",
       "permission_level":"write",
       "cached":"0",
       "photo":{},
       "p": "1",
       "size": "1",
       "site": { ... },
-      "endpoint": "/api/photo/section/update"
+      "endpoint": "/api/photo/section/create"
     }
 

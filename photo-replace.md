@@ -18,6 +18,14 @@ Replace a photo, replace a video or update the thumbnail of a video.
       When replacing the thumbnail of a video, you can extract the thumb from a specific part of the video (i.e. <tt>40.2</tt>). Also, have a look at <a href="photo-frame">/api/photo/frame</a>.
     </td>
   </tr>
+  <tr>
+    <td>
+      <tt><tt>crop_p</tt></tt>
+    </td>
+    <td>
+      Specify whether or not to crop the uploaded photo to fit the size of the existing photo or video.
+    </td>
+  </tr>
 </table>
 
     

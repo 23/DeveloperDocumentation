@@ -40,6 +40,15 @@ Get a list of live events video streams.
 
   <tr>
     <td>
+      <tt>featured_p</tt> 
+    </td>
+    <td>
+      Filter between streams from featured or un-featured live events.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>include_inactive_p</tt> 
     </td>
     <td>

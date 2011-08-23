@@ -15,6 +15,15 @@ A call to this method can either specify a simple text `message` parameter for p
 
   <tr>
     <td>
+      <tt>payload</tt> 
+    </td>
+    <td>
+      A properly formated JSON dictiorary matching <a href="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1">Apple's specifications</a>. The maximum size allowed for a notification <tt>payload</tt> is 256 bytes. Whenever this parameter is used, all other parameters are ignored.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>message</tt> 
     </td>
     <td>
@@ -24,10 +33,46 @@ A call to this method can either specify a simple text `message` parameter for p
 
   <tr>
     <td>
-      <tt>payload</tt> 
+      <tt>badge</tt> 
     </td>
     <td>
-      A properly formated JSON dictiorary matching <a href="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1">Apple's specifications</a>. The maximum size allowed for a notification <tt>payload</tt> is 256 bytes.
+      The `badge` parameter to pass on in the payload. See <a href="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1">the official documentation</a> for more detail.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>sound</tt> 
+    </td>
+    <td>
+      The `sound` parameter to pass on in the payload. See <a href="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1">the official documentation</a> for more detail.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>photo_id</tt> 
+    </td>
+    <td>
+      Send a specific <tt>photo_id</tt> wrapped in a <tt>visual</tt> object in the payload. Can be used to go to a specific object in the application when a notification has been engaged.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>album_id</tt> 
+    </td>
+    <td>
+      Send a specific <tt>album_id</tt> wrapped in a <tt>visual</tt> object in the payload. Can be used to go to a specific object in the application when a notification has been engaged.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>liveevent_id</tt> 
+    </td>
+    <td>
+      Send a specific <tt>liveevent_id</tt> wrapped in a <tt>visual</tt> object in the payload. Can be used to go to a specific object in the application when a notification has been engaged.
     </td>
   </tr>
 </table>

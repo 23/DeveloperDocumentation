@@ -168,7 +168,6 @@ Methods for managing and listing geographic coordanates and maps associates with
 
 * [/api/photo/coordinate/add](photo-coordinate-add): Add a new geographic coordinate to a photo or video.
 * [/api/photo/coordinate/delete](photo-coordinate-delete): Delete a geographic coordinate associated with a photo or video.
-* [/api/photo/coordinate/list](photo-coordinate-list): List coordiates associates with one or more photos or videos.
 
 ### Distributions
 

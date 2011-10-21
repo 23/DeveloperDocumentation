@@ -215,7 +215,7 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
 * [/api/photo/replace](photo-replace): Replace a photo, replace a video or update the thumbnail of a video. 
 * [/api/photo/update](photo-update): Update the meta data of a photo or video.
-* [/api/photo/update-upload-token](photo-update-upload-token): Update a photo or video. which has previously been or is in the process of being uploaded to the site.
+* [/api/photo/update-upload-token](photo-update-upload-token): Update the meta data of a photo or video, which has previously been or is in the process of being uploaded to the site through [browser-based uploading](browser-based-uploads).
 * [/api/photo/upload](photo-upload): Upload a new photo or video.
 
 ### Players

@@ -1,7 +1,7 @@
 # API Method: /api/photo/update-upload-token
 # flags=comments
 
-Update a photo or video. which has previously been or is in the process of being uploaded to the site.
+Update the meta data of a photo or video, which has previously been or is in the process of being uploaded to the site through [browser-based uploading](browser-based-uploads).
 
 ### Parameters
 

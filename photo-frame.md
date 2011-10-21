@@ -11,19 +11,37 @@ Please note that this API method is subject to rate limiting and might be disabl
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr>
     <td>
-      <tt>photo_id (required)</tt>
+      <tt>photo_id</tt>
     </td>
     <td>
-      The ID of the video to fetch a frame for.
+      The ID of the video to fetch a frame for. If this parameter is given, <tt>token</tt> is required.
     </td>
   </tr>
 
   <tr>
     <td>
-      <tt>token (required)</tt>
+      <tt>token</tt>
     </td>
     <td>
-      The corresponding token for the photo_id.
+      The corresponding token for the photo_id. If this parameter is given, <tt>photo_id</tt> is required.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>upload_token</tt>
+    </td>
+    <td>
+      An upload token for a file uploaded through <a href="photo-get-upload-token">the token upload method</a>. You might want to include a <tt>filename</tt> along with this parameter.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>filename</tt>
+    </td>
+    <td>
+      If you have uploaded multiple files with the same <tt>upload_token</tt> use the file's name to identify it.
     </td>
   </tr>
 

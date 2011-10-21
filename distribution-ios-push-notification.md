@@ -89,13 +89,14 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="super" 
-      message="The push notification was successfully to all registered iOS devices" cached="0"/>
+      message="The push notification was successfully snet to all registered iOS devices" 
+      cached="0"/>
 
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message": "The push notification was successfully to all registered iOS devices",
+      "message": "The push notification was successfully snet to all registered iOS devices",
       "permission_level":"super",
       "cached":"0",
       "photo":{},

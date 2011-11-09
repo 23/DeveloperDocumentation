@@ -241,6 +241,28 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>prioritize_promoted_p</tt>
+    </td>
+    <td>
+      Should the request prioritize videos marked as promoted or not
+      <i>Default:</i> <tt>1<t><br/>
+      <i>Valid values:</i> <tt>0</tt> or <tt>1</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>promoted_p</tt>
+    </td>
+    <td>
+      Filter list to only include videos which are promoted or not promoted.
+      <i>Default:</i> <i>(empty)</i><br/>
+      <i>Valid values:</i> <i>(empty)</i>, <tt>0</tt> or <tt>1</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>p</tt>
     </td>
     <td>

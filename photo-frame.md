@@ -38,15 +38,6 @@ Please note that this API method is subject to rate limiting and might be disabl
 
   <tr>
     <td>
-      <tt>filename</tt>
-    </td>
-    <td>
-      If you have uploaded multiple files with the same <tt>upload_token</tt> use the file's name to identify it.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
       <tt>time (required)</tt>
     </td>
     <td>
@@ -63,6 +54,13 @@ Please note that this API method is subject to rate limiting and might be disabl
     </td>
   </tr>
 </table>    
+
+### Parameters for Resumable.js
+
+This API methods support an extra set of parameters designed to work with [Resumable.js](https://github.com/23/Resumable.js), an [open sourced](http://www.23developer.com/opensource) JavaScript library for providing multiple simultaneous, stable, fault-tolerant and resumable uploads via the HTML5 File API released by 23.
+
+You can retrieve a frame for one of multiple files being uploaded through Resumable.js by including the specific file's `resumableIdentifier` in the request along with the parameters listed above.
+
 
 ### Permission level 
 

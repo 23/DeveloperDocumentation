@@ -551,6 +551,7 @@ Browser-based uploading is designed to allow API consumers to pre-authenticate u
 The 23 API is designed to be generic and accessible in just about any programming language. We are making a number of implementations and libraries available to make the interaction easier:
 
 * [.NET API for 23 Video](http://github.com/23/23-api-dotnet)
+* [Node.js library for 23 Video](http://github.com/23/node-23video)
 * [PHP sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 * [Ruby sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)
 * [SharePoint Web Part for 23 Video](http://github.com/23/23-video-for-sharepoint)

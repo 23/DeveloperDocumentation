@@ -15,8 +15,11 @@ Upload a new file to the site.
   <tr><td><tt>description</tt></td><td>A description of upload. The value can include save HTML tags such as &lt;b&gt; or &lt;p&gt;; however, if any disallowed tags are included, all html with be stripped from the description.</td></tr>
   <tr><td><tt>tags</tt></td><td>Space-separated list of tags to attach to the uploaded file.</td></tr>
   <tr><td><tt>publish</tt></td><td>Should the file be published in the site immediately? Default is <tt>1</tt> (<tt>0</tt> or <tt>1</tt>)</td></tr>
+  <tr><td><tt>publish_date</tt></td><td>Specific publish date of the photo or video, either past or future.</td></tr>
+  <tr><td><tt>absolute_url</tt></td><td>If the uploaded photo or video is to be associated with a different canonical URI from the on assigned by default, set it here.</td></tr>
 </table>
 
+In addition to the standard parameters, any custom variable configured for `photo` objects can be set using the variable `key` as a parameter.
     
 
 ### Permission level 

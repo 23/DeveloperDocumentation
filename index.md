@@ -154,6 +154,12 @@ Methods for creating and managing albums and channels.
 * [/api/album/list](album-list): List and search through channels or albums
 * [/api/album/update](album-update): Update the meta data of a channel or album
 
+### Attachments
+
+Methods for managing and querying video files attachments.
+
+* [/api/photo/attachment/list](photo-attachment-list): Return a list of files attached to a video.
+
 ### Comments
 
 Methods for listing and managing comments.
@@ -252,8 +258,8 @@ Methods for querying meta data about sites.
 
 Methods for managing and querying video subtitles and captions.
 
-* [/api/photo/subtitle/list](photo-subtitle-list): Retrieve subtitles for a video.
 * [/api/photo/subtitle/data](photo-subtitle-data): Return the raw data (usually in JSON or WebSRT) to show subtitles.
+* [/api/photo/subtitle/list](photo-subtitle-list): Retrieve subtitles for a video.
 
 ### Tags
 

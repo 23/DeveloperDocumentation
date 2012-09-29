@@ -30,7 +30,7 @@ Extract total values from a site, a single photo or a series of photos from the 
 
 The minimum required [permission level](index#permission-level) is:
 
-    custom
+    read
 
 
 ### Example XML Response
@@ -49,7 +49,7 @@ Notes on specific output values:
 
     {
       "status": "ok", 
-      "permission_level": "custom",
+      "permission_level": "read",
       "cached": "0",
       "analytics": {
         "daily": [

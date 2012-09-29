@@ -58,10 +58,10 @@ Get a list of live events video streams.
 
   <tr>
     <td>
-      <tt>include_invisible_liveevents</tt> 
+      <tt>include_invisible_liveevents_p</tt> 
     </td>
     <td>
-      Include streams from private/invisible live events. Requires <tt>read</tt> privileges or a relavant <tt>token</tt>.
+      Include streams from private/invisible live events. Requires <tt>read</tt> privileges or a relevant <tt>token</tt>.
     </td>
   </tr>
 

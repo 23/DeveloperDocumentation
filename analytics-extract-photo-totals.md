@@ -21,7 +21,7 @@ Extract a complete list of aggregated totals from one or more sites updated sinc
 
 The minimum required [permission level](index#permission-level) is:
 
-    custom
+    read
 
 
 ### Example XML Response
@@ -32,7 +32,7 @@ Analytics extraction endpoints do not support XML output formatting.
 
     {
       "status": "ok", 
-      "permission_level": "custom",
+      "permission_level": "read",
       "cached": "0",
       "analytics": {
         "photos": [

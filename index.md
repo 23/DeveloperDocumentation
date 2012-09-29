@@ -253,6 +253,7 @@ Methods for querying meta data about sites.
 Methods for managing and querying video subtitles and captions.
 
 * [/api/photo/subtitle/list](photo-subtitle-list): Retrieve subtitles for a video.
+* [/api/photo/subtitle/data](photo-subtitle-data): Return the raw data (usually in JSON or WebSRT) to show subtitles.
 
 ### Tags
 
@@ -275,7 +276,7 @@ Methods for managing users.
 * [/api/user/get-login-token](user-get-login-token): Get a token for logging in a user.
 * [/api/user/list](user-list): List users
 * [/api/user/redeem-login-token](user-redeem-login-token): Log in a user using a [login token](user-get-login-token).
-
+* [/api/user/update](user-update): Update a user account
 
 
 ---
@@ -551,6 +552,7 @@ Browser-based uploading is designed to allow API consumers to pre-authenticate u
 The 23 API is designed to be generic and accessible in just about any programming language. We are making a number of implementations and libraries available to make the interaction easier:
 
 * [.NET API for 23 Video](http://github.com/23/23-api-dotnet)
+* [Client-side JavaScript library the 23 Video](https://github.com/23/visualplatform.js)
 * [Node.js library for 23 Video](http://github.com/23/node-23video)
 * [PHP sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/php/)
 * [Ruby sample implementation](http://github.com/23/DeveloperDocumentation/tree/master/lib/ruby/)

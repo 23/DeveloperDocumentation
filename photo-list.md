@@ -92,6 +92,15 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>source</tt>
+    </td>
+    <td>
+      A source for the request, designed to be used in analytics (normal options are <tt>admin</tt>, <tt>site</tt>, <tt>share</tt>, <tt>embed</tt>, <tt>podcast</tt>, <tt>download</tt>, <tt>search</tt> and <tt>facebook</tt> but you may choose your own source).
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>year</tt>
     </td>
     <td>

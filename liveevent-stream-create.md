@@ -10,7 +10,7 @@ Create a new live event video stream.
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td><tt>name</tt> <small>(required)</small></td><td>The name of the live event. All HTML tags will be stripped away from the name.</td></tr>
   <tr><td><tt>liveevent_id</tt> <small>(required)</small></td><td>The ID of the live event for which you want the stream to be created.</td></tr>
-  <tr><td><tt>active_p</tt></td><td>Is the stream active to visitors of the site?<br/>Default is <tt>0</tt><br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
+  <tr><td><tt>record_p</tt></td><td>Should the stream be recorded to the video archive? Maximum recording length is three hours and the maximum size is 2 GB.<br/>Default is <tt>0</tt><br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
   <tr><td><tt>publish_recordings_p_p</tt></td><td>Should recording from this stream be published when put back to your video archive?<br/>Default is <tt>0</tt><br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
 </table>
 

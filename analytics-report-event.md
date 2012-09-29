@@ -15,6 +15,9 @@ The reporting methods are used to report additional contextual information about
   <tr><td><tt>user_player_type</tt></td><td>The type of player used by the client (should be <tt>flash</tt> or <tt>html5</tt>).</td></tr>
   <tr><td><tt>user_player_version</tt></td><td>The version of player used by the client.</td></tr>
   <tr><td><tt>user_player_resolution</tt></td><td>The resolution of the client's screen.</td></tr>
+  <tr><td><tt>source</tt></td><td>
+    A source for the request, designed to be used in analytics (normal options are <tt>admin</tt>, <tt>site</tt>, <tt>share</tt>, <tt>embed</tt>, <tt>podcast</tt>, <tt>download</tt>, <tt>search</tt> and <tt>facebook</tt> but you may choose your own source).
+  </td></tr>
 </table>
 
 ### Event types

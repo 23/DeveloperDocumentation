@@ -10,7 +10,7 @@ Update the meta data about a live event video stream.
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td><tt>liveevent_stream_id</tt> <small>(required)</small></td><td>The ID for the live event video stream to be updated.</td></tr>
   <tr><td><tt>name</tt></td><td>The name of the stream. All HTML tags will be stripped away from the name.</td></tr>
-  <tr><td><tt>active_p</tt></td><td>Is the stream active to visitors of the site?<br/>Allowed values are <tt>0</tt> and <tt>1</tt>, but the parameter is optional is you want to leave the current setting unchanged.</td></tr>
+  <tr><td><tt>record_p</tt></td><td>Should the stream be recorded to the video archive? Maximum recording length is three hours and the maximum size is 2 GB.<br/>Allowed values are <tt>0</tt> and <tt>1</tt>, but the parameter is optional is you want to leave the current setting unchanged.</td></tr>
   <tr><td><tt>publish_recordings_p_p</tt></td><td>Should recording from this stream be published when put back to your video archive?<br/>Allowed values are <tt>0</tt> and <tt>1</tt>, but the parameter is optional is you want to leave the current setting unchanged.</td></tr>
 </table>
 

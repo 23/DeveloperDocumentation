@@ -20,7 +20,7 @@ This method can be used to pre-authenticated uploads to a site without proxying 
   <tr><td><tt>publish</tt></td><td>Should the file be published in the site immediately?<br/>Default is <tt>1</tt>.<br/><i>Valid values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
   <tr><td><tt>absolute_url</tt></td><td>If the uploaded photo or video is to be associated with a different canonical URI from the on assigned by default, set it here.</td></tr>
   <tr><td><tt>valid_minutes</tt></td><td>How many minutes should the upload token be valid for. The default is <tt>180</tt> minutes (or 3 hours). The minimum value is 15 minutes and the maximum is 24 hours.</td></tr>
-  <tr><td><tt>max_uploads</tt></td><td>How many files can be uploaded using the returned token. The default is <tt>1</tt> upload; the maximum is 10</td></tr>
+  <tr><td><tt>max_uploads</tt></td><td>How many files can be uploaded using the returned token. The default is <tt>1</tt> upload; the maximum is 100</td></tr>
 </table>
 
 In addition to the standard parameters, any custom variable configured for `photo` objects can be set using the variable `key` as a parameter.

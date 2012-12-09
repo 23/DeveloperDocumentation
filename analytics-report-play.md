@@ -13,9 +13,9 @@ The reporting methods are used to report additional contextual information about
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td><tt>photo_id</tt> <small>(required)</small></td><td>The ID of the playing video.</td></tr>
-  <tr><td><tt>time_start</tt> <small>(required)</small></td><td>The start time in seconds of the current playback.</td></tr>
-  <tr><td><tt>time_end</tt></td><td>The end time in seconds of the current playback.</td></tr>
-  <tr><td><tt>time_total</tt></td><td>The total time in seconds of the video currently paying.</td></tr>
+  <tr><td><tt>timeStart</tt> <small>(required)</small></td><td>The start time in seconds of the current playback.</td></tr>
+  <tr><td><tt>timeEnd</tt></td><td>The end time in seconds of the current playback.</td></tr>
+  <tr><td><tt>timeTotal</tt></td><td>The total time in seconds of the video currently paying.</td></tr>
   <tr><td><tt>user_player_type</tt></td><td>The type of player used by the client (should be <tt>flash</tt> or <tt>html5</tt>).</td></tr>
   <tr><td><tt>user_player_version</tt></td><td>The version of player used by the client.</td></tr>
   <tr><td><tt>user_player_resolution</tt></td><td>The resolution of the client's screen.</td></tr>

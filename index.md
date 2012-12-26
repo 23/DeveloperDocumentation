@@ -410,58 +410,39 @@ Put plainly:
 
 ## Time-limited tokens
 
-In some cases, you will want to grant visitors time-limited access to a video or a photo. To do so you will be using [the secret `token`](#token-access-to-photo-and-videos) to generate a new and time-limited token from tree different parts:
+In some cases, you will want to grant visitors time-limited access to a video or a photo. To do so you will be using [the secret `token`](#token-access-to-photo-and-videos) to generate a new and time-limited token from two parts:
 
 * An expiration timestamp, `expire`, in [UTC seconds after epoch](http://en.wikipedia.org/wiki/Unix_time), i.e `1292438117`. Before the expiration time, the signature is accepted. After this time, the signature is denied. 
 * The `photo_id` to identify the item, i.e. `97531`.
-* Optionally, a `start` and `end` time of the video, i.e. `30` for start time to start up the video 30 seconds in. The end time might be kept empty to allow the video to run its full length or could be set to `90` to stop the video stream 90 seconds in. 
 
 These parameters are collated alphabetically into a string, which is in turn transformed into a HMAC-SHA1 hash using the secret `token` (i.e. `123abc`). 
 
-    // When `start` and `end` isn't used
     expire1292438117photo_id97531
-    // When `start` and `end` is included
-    end90expire1292438117photo_id97531start30
-    // When `end` is empty
-    endexpire1292438117photo_id97531start30
     
 The collated string is signed with `token`:
 
     hmac_sha1('123abc', 'expire1292438117photo_id97531')
      = 5ea04282ea3c4a9beca6234606006b56e0cb923d
-    hmac_sha1('123abc', 'end90expire1292438117photo_id97531start30')
-     = 55e1edd79178fdc6b0c77d94ce2189bd65163207
-    hmac_sha1('123abc', 'endexpire1292438117photo_id97531start30')
-     = 95d9750fbbc98f76c60de11343581e18a301c65e
 
-The resulting hash and `expire` along with possibly `start` and `end` (separated by a dash, `-`) are concatenated into the *time-limited token* such as these for the three cases listed here:
+The resulting hash and `expire` are concatenated into the *time-limited token* such as this:
 
-    // Simple version with just an expire
     5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-    // Token with expiration, start and end
-    55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117-30-90
-    // Variation width start and empty end
-    95d9750fbbc98f76c60de11343581e18a301c65e-1292438117-30-
 
-This final token can be used in place of [the traditional token](#token-access-to-photos-and-videos) with URLs and API calls where specified. Examples of how such request might look include these:
+This final token can be used in place of [the traditional token](#token-access-to-photos-and-videos) with URLs and API calls where specified:
 
     // Download HD version
-    http://video.example.com/123/97531/
-     5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117/video_hd
+    http://video.example.com/123/97531/5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117/video_hd
     // Mobile redirect
-    http://video.example.com/m/d/97531/55e1edd79178fdc6b0c77d94ce2189bd65163207-1292438117-30-90
+    http://video.example.com/m/d/97531/5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
     // Get info through API
-    http://video.example.com/api/photo/list?photo_id=97531
-      &token=95d9750fbbc98f76c60de11343581e18a301c65e-1292438117-30-
+    http://video.example.com/api/photo/list?photo_id=97531&token=5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
       
 An time-limited embed code for a single video might look like this:
 
-    <embed src="http://reference.dev.visualtube.net/v.swf" 
-      type="application/x-shockwave-flash" allowscriptaccess="always" 
-      allowfullscreen="true" wmode="transparent" width="625" height="469" 
-      FlashVars="photo_id=97531&token=5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117">
-    </embed>
-    
+    <iframe src="http://videos.23video.com/v.ihtml?token=5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
+      &source=embed&photo%5fid=7512173" width="640" height="360" frameborder="0" border="0" 
+      scrolling="no" allowfullscreen="1" mozallowfullscreen="1" webkitallowfullscreen="1">
+    </iframe>
 
 ---
 

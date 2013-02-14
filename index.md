@@ -229,7 +229,7 @@ Methods for uploading and managing videos and photos.
 Methods for listing and use video players.
 
 * [/api/player/list](player-list): List available video players
-* [/api/player/settings](player-setting): Request specific player settings
+* [/api/player/settings](player-settings): Request specific player settings
 
 ### Sections
 

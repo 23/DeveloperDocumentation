@@ -9,3 +9,5 @@ data/*
 packages/um/resources/startup-video/*
 lib/ruby/oauth.yml
 lib/php/visualplatform.config.php
+.static
+.DS_Store

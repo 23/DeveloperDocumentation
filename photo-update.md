@@ -24,7 +24,7 @@ The only required parameter is <tt>photo_id</tt>. Whenever parameters are omitte
       <tt>album_id</tt>
     </td>
     <td>
-      An album (or channel) ID.
+      An album (or channel) ID. Multiple values should be comma-separated.
     </td>
   </tr>
   <tr>

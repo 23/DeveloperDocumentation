@@ -215,9 +215,11 @@ Methods for uploading and managing videos and photos.
 
 * [/api/photo/delete](photo-delete): Delete a photo or video.
 * [/api/photo/frame](photo-frame): Extract a single frame of a video clip as a JPEG image.
+* [/api/photo/get-replace-token](photo-get-replace-token): Get a token for browser-based and non-authenticated replace of photos, thumbnails and videos.
 * [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
 * [/api/photo/list](photo-list): List and search through photos and videos.
 * [/api/photo/rate](photo-rate): Rate a photo or video.
+* [/api/photo/redeem-replace-token](photo-redeem-replace-token): Replace a video, thumbnail or photo using a  [replace token](photo-get-replace-token).
 * [/api/photo/redeem-upload-token](photo-redeem-upload-token): Upload a video or photo using an  [upload token](photo-get-upload-token).
 * [/api/photo/replace](photo-replace): Replace a photo, replace a video or update the thumbnail of a video. 
 * [/api/photo/update](photo-update): Update the meta data of a photo or video.

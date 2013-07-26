@@ -16,6 +16,23 @@ If you want to force a user to be logged out after having be signed in through t
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr><td>return_url</td><td>The URL the user is redirected to after the session has been signed.</td></tr>
+    <tr>
+    <td>
+      <tt>email</tt> 
+    </td>
+    <td>
+      The e-mail address of the user being granted session access (optional).
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <tt>full_name</tt>
+    </td>
+    <td>
+      The person's full name (optional).
+    </td>
+  </tr>
+
 </table>
 
 ### Permission level 

@@ -128,6 +128,24 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
+      <tt>after_time</tt>
+    </td>
+    <td>
+      Only include content created, uploaded or published after this time. See also `datemode`.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>before_time</tt>
+    </td>
+    <td>
+      Only include content created, uploaded or published before this time. See also `datemode`.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
       <tt>video_p</tt>
     </td>
     <td>

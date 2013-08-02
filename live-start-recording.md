@@ -1,14 +1,13 @@
-# API Method: /api/liveevent/stream/record
-# flags=comments
+# API Method: /api/live/start-recording
 
-Start recording from a live event video stream
+Start recording from a live stream.
 
 
 ### Parameters
 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>liveevent_stream_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want to record.</td></tr>
+  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want to record.</td></tr>
 </table>
 
     
@@ -17,7 +16,7 @@ Start recording from a live event video stream
 
 The minimum required [permission level](index#permission-level) is:
 
-    write
+    read
 
 
 ### Example XML Response
@@ -35,5 +34,5 @@ The minimum required [permission level](index#permission-level) is:
       "p": "1",
       "size": "1",
       "site": { ...},
-      "endpoint": "/api/liveevent/stream/start"
+      "endpoint": "/api/live/start-recording"
     }

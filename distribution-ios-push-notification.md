@@ -69,10 +69,10 @@ A call to this method can either specify a simple text `message` parameter for p
 
   <tr>
     <td>
-      <tt>liveevent_id</tt> 
+      <tt>live_id</tt> 
     </td>
     <td>
-      Send a specific <tt>liveevent_id</tt> wrapped in a <tt>visual</tt> object in the payload. Can be used to go to a specific object in the application when a notification has been engaged.
+      Send a specific <tt>live_id</tt> wrapped in a <tt>visual</tt> object in the payload. Can be used to go to a specific object in the application when a notification has been engaged.
     </td>
   </tr>
 </table>

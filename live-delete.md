@@ -1,14 +1,13 @@
-# API Method: /api/liveevent/stream/stop
-# flags=comments
+# API Method: /api/live/delete
 
-Stop recording from a live event video stream
+Delete a live  stream.
 
 
 ### Parameters
 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>liveevent_stream_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want recording to stop.</td></tr>
+  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the live stream to be deleted.</td></tr>
 </table>
 
     
@@ -23,17 +22,17 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="write" 
-      message="The stream has stopped recording" cached="0">
+      message="The live stream was deleted" cached="0">
 
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message":"The stream has stopped recording",
+      "message":"The live stream was deleted",
       "permission_level":"write",
       "cached":"0",
       "p": "1",
       "size": "1",
       "site": { ...},
-      "endpoint": "/api/liveevent/stream/stop"
+      "endpoint": "/api/live/update"
     }

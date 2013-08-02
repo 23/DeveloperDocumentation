@@ -189,25 +189,18 @@ Methods for listing and managing licenses.
 
 * [/api/license/list](license-list): List licenses.
 
-### Live Events <small>(closed beta)</small>
+### Live <small>(closed beta)</small>
 
-Methods for creating and managing live events.
+Methods for creating and managing live streams.
 
-* [/api/liveevent/create](liveevent-create): Create a new live event.
-* [/api/liveevent/delete](liveevent-delete): Delete a live event.
-* [/api/liveevent/list](liveevent-list): List one or more live events.
-* [/api/liveevent/update](liveevent-update): update a live event.
-
-### Live Event Streams <small>(closed beta)</small>
-
-Methods for creating and managing live event video streams.
-
-* [/api/liveevent/stream/create](liveevent-stream-create): Create a new live event video stream.
-* [/api/liveevent/stream/delete](liveevent-stream-delete): Delete a live event video stream.
-* [/api/liveevent/stream/list](liveevent-stream-list): List one or more live events video stream.
-* [/api/liveevent/stream/record](liveevent-stream-record): Start recording a live events video stream.
-* [/api/liveevent/stream/stop](liveevent-stream-stop): Stop recording a live events video stream.
-* [/api/liveevent/stream/update](liveevent-stream-update): Update a live event video stream.
+* [/api/live/create](live-create): Create a new live stream.
+* [/api/live/delete](live-delete): Delete a live stream.
+* [/api/live/list](live-list): List one or more live streams.
+* [/api/live/start-recording](live-start-recording): Start recording a video stream.
+* [/api/live/stop-recording](live-stop-recording): Stop recording a video stream.
+* [/api/live/update](live-update): update a live stream.
+* [/api/live/upload-thumbnail](live-upload-thumbnail): Upload a thumbnail for the stream.
+* [/api/live/upload-preview](live-upload-preview): Upload a preview for the stream.
 
 ### Photos and videos
 

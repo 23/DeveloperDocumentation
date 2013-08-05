@@ -196,11 +196,24 @@ Methods for creating and managing live streams.
 * [/api/live/create](live-create): Create a new live stream.
 * [/api/live/delete](live-delete): Delete a live stream.
 * [/api/live/list](live-list): List one or more live streams.
-* [/api/live/start-recording](live-start-recording): Start recording a video stream.
-* [/api/live/stop-recording](live-stop-recording): Stop recording a video stream.
 * [/api/live/update](live-update): update a live stream.
-* [/api/live/upload-thumbnail](live-upload-thumbnail): Upload a thumbnail for the stream.
-* [/api/live/upload-preview](live-upload-preview): Upload a preview for the stream.
+* [/api/live/upload-image](live-upload-image): Upload a thumbnail or a preview image for the stream.
+
+### Live schedule <small>(closed beta)</small>
+
+Methods for working with the schedule for live streams
+
+* [/api/live/schedule/add](live-schedule-add): Add a time to the streaming schedule.
+* [/api/live/schedule/list](live-schedule-list): List the upcoming streaming schedule.
+* [/api/live/schedule/remove](live-schedule-remove): Remove a time from the streaming schedule.
+
+### Live recording <small>(closed beta)</small>
+
+Methods for recording from live streams.
+
+* [/api/live/recording/start](live-recording-start): Start recording a video stream.
+* [/api/live/recording/stop](live-recording-stop): Stop recording a video stream.
+
 
 ### Photos and videos
 

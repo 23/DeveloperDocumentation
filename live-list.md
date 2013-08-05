@@ -32,7 +32,16 @@ Get a list of live events.
       <tt>include_private_p</tt> 
     </td>
     <td>
-      Include privatelive events in the list. Requires <tt>read</tt> privileges, but may be overwritten by a combination of `live_id`/`token`.
+      Include private live events in the list. Requires <tt>read</tt> privileges, but may be overwritten by a combination of `live_id`/`token`.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>upcoming_p</tt> 
+    </td>
+    <td>
+      Filter by whether there is schedule content coming up in the stream: Setting this parameter to `1` will limit the return to currently active streams and events with scheduled activity. This means that users will either get an active stream or a stream with a countdown to live.
     </td>
   </tr>
 

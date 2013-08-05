@@ -1,13 +1,13 @@
-# API Method: /api/live/stop-recording
+# API Method: /api/live/recording/start
 
-Stop recording from a live video stream.
+Start recording from a live stream.
 
 
 ### Parameters
 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want recording to stop.</td></tr>
+  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want to record.</td></tr>
 </table>
 
     
@@ -22,17 +22,17 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="write" 
-      message="The stream has stopped recording" cached="0">
+      message="The stream has started recording" cached="0">
 
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message":"The stream has stopped recording",
+      "message":"The stream has started recording",
       "permission_level":"write",
       "cached":"0",
       "p": "1",
       "size": "1",
       "site": { ...},
-      "endpoint": "/api/live/stop-recording"
+      "endpoint": "/api/live/start-recording"
     }

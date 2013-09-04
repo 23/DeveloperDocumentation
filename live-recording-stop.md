@@ -16,7 +16,7 @@ Stop recording from a live video stream.
 
 The minimum required [permission level](index#permission-level) is:
 
-    read
+    write
 
 
 ### Example XML Response

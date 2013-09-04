@@ -1,7 +1,7 @@
 # API Method: /api/session/get-token
 # flags=comments
 
-Get a session access token, which can in turn be used to sign a user's session using [/api/session/redeem-token](session-redeem-token). The return token must be used within 15 minutes.
+Get a session access token, which can in turn be used to sign a user's session using [/api/session-redeem-token](session-redeem-token). The return token must be used within 15 minutes.
 
 This procedure is designed to work alongside the _Single sign-on or Paywall_ option in the site's security settings. When this option is selected, all visitors (not logged-in users) must be redirected to the site through this procedure in order to gain access to the site's content. This allows the developer full control of who is allowed in, and it is usually used for intranet sites or for sites behind a paywall.
 

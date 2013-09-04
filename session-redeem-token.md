@@ -7,6 +7,8 @@ This is the second step of the session authorization procedure. If you have `ses
 
     http://videos.example.com/api/session/redeem-token?session_token=abcdef12345
 
+Note that the session will assume the user redeeming the token has the `full name` and/or `e-mail` credentials provided prior in the get-token / redeem-token chain.
+
 
 ### Parameters
 

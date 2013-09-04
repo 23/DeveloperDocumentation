@@ -48,7 +48,7 @@ The only required parameter is <tt>photo_id</tt>. Whenever parameters are omitte
       <tt>tags</tt>
     </td>
     <td>
-      Space-separated list of tags to attach to the object. If this parameter is omitted, existing tags are left unchanged. If the paramter is specified, all existing tags will be overwritten with the new value.
+      Space-separated list of tags to attach to the object. If this parameter is omitted, existing tags are left unchanged. If the paramter is specified, all existing tags will be overwritten with the new value. 
     </td>
   </tr>
   <tr>

@@ -16,7 +16,7 @@ Start recording from a live stream.
 
 The minimum required [permission level](index#permission-level) is:
 
-    read
+    write
 
 
 ### Example XML Response

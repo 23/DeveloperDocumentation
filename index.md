@@ -211,6 +211,7 @@ Methods for working with the schedule for live streams
 
 Methods for recording from live streams.
 
+* [/api/live/recording/split](live-recording-split): Split an ongoing recording of a video stream.
 * [/api/live/recording/start](live-recording-start): Start recording a video stream.
 * [/api/live/recording/stop](live-recording-stop): Stop recording a video stream.
 

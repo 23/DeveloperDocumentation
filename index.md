@@ -159,6 +159,16 @@ Methods for creating and managing albums and channels.
 Methods for managing and querying video files attachments.
 
 * [/api/photo/attachment/list](photo-attachment-list): Return a list of files attached to a video.
+* [/api/photo/attachment/upload](photo-attachment-upload): Upload attachments to a video.
+
+### Call-to-action
+
+Methods for listing and managing calls-to-actin.
+
+* [/api/cta/add](cta-add): Add a call-to-action item.
+* [/api/cta/delete](cta-add): Delete a call-to-action item.
+* [/api/cta/get](cta-add): Get a list of CTA items.
+* [/api/cta/update](cta-add): Update a call-to-action-item.
 
 ### Comments
 

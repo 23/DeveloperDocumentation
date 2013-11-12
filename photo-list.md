@@ -250,19 +250,10 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
 
   <tr>
     <td>
-      <tt>liveevent_id</tt>
+      <tt>live_id</tt>
     </td>
     <td>
-      The live event associated with the content item. See [/api/liveevent/list](license-list) for more information.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <tt>liveevent_stream_id</tt>
-    </td>
-    <td>
-      The live event video stream associated with the content item. See [/api/liveevent/stream/list](license-list) for more information.
+      The ID of the live event associated with the content item. See [/api/live/list](live-list) for more information.
     </td>
   </tr>
 

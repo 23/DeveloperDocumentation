@@ -3,7 +3,7 @@
 
 Update the meta data -- including title, description, tags, channel/album and publish status -- of a photo or video.
 
-The only required parameter is <tt>photo_id</tt>. Whenever parameters are omitted, the current value is retained. 
+The only required parameter is <tt>photo_id</tt>. Whenever parameters are omitted, the current value is retained.
 
 
 ### Parameters

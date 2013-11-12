@@ -213,6 +213,7 @@ Methods for recording from live streams.
 
 * [/api/live/recording/split](live-recording-split): Split an ongoing recording of a video stream.
 * [/api/live/recording/start](live-recording-start): Start recording a video stream.
+* [/api/live/recording/status](live-recording-status): Status on current recording.
 * [/api/live/recording/stop](live-recording-stop): Stop recording a video stream.
 
 
@@ -560,7 +561,7 @@ The 23 API is designed to be generic and accessible in just about any programmin
 
 ## Any questions?
 
-As noted in the beginning of this document, the 23 API is designed to be used in a multitude of different contexts. If you find it comes up short and have suggestions for improvements -- or if you have questions on how to use the API -- feel free to post a message in out [Developer Community](/community/forum-view?forum_id=850) or send an e-mail directly to [steffen@23company.com](mailto:steffen@23company.com)
+As noted in the beginning of this document, the 23 API is designed to be used in a multitude of different contexts. If you find it comes up short and have suggestions for improvements -- or if you have questions on how to use the API -- feel free to reach out to us on [+45 33 98 63 26](tel:+4533986326) or  send an e-mail directly to [support@23company.com](mailto:support@23company.com)
 
 
 <script>createIndex('The API', 'h2');</script>

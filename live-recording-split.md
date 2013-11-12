@@ -1,13 +1,13 @@
-# API Method: /api/live/recording/stop
+# API Method: /api/live/recording/split
 
-Stop recording from a live video stream.
+Split a current recording of the live video stream now.
 
 
 ### Parameters
 
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the stream for which you want recording to stop.</td></tr>
+  <tr><td><tt>live_id</tt> <small>(required)</small></td><td>The ID for the stream you want to split.</td></tr>
 </table>
 
     
@@ -33,8 +33,8 @@ The minimum required [permission level](index#permission-level) is:
       "message":"The stream has stopped recording",
       "permission_level":"write",
       "cached":"0",
-      "live":{"upload_token": "live-678j35g34jh54309"},
       "p": "1",
+      "live":{"upload_token": "live-678j35g34jh54309"},
       "size": "1",
       "site": { ...},
       "endpoint": "/api/live/stop-recording"

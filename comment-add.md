@@ -68,7 +68,7 @@ Post a new comment.
       <tt>ip_address</tt> 
     </td>
     <td>
-      The IP address of the poster of the comment. This is used for spam protection and learning.
+      The IP address of the poster of the comment. This is used for spam protection and learning. This option is only available with `write` permissions or higher.
     </td>
   </tr>
 
@@ -77,7 +77,7 @@ Post a new comment.
       <tt>ignore_spam_p</tt> 
     </td>
     <td>
-      Specifies whether spam errors should be ignored. The default value is <tt>0</tt> meaning that comments flagged by the spam filters result in an <tt>comment_is_spam</tt> error being returned. If this option is set to <tt>1</tt>, spam filters are not applied.
+      Specifies whether spam errors should be ignored. The default value is <tt>0</tt> meaning that comments flagged by the spam filters result in an <tt>comment_is_spam</tt> error being returned. If this option is set to <tt>1</tt>, spam filters are not applied. This option is only available with `write` permissions or higher.
     </td>
   </tr>
 
@@ -86,7 +86,7 @@ Post a new comment.
       <tt>approved_p</tt> 
     </td>
     <td>
-      If your site uses comment screening, you can set the comment to approved by setting this option to <tt>1</tt>. The default value is <tt>0</tt>.
+      If your site uses comment screening, you can set the comment to approved by setting this option to <tt>1</tt>. The default value is <tt>0</tt>. This option is only available with `write` permissions or higher.
     </td>
   </tr>
 </table>
@@ -97,7 +97,7 @@ Post a new comment.
 
 The minimum required [permission level](index#permission-level) is:
 
-    write
+    anonymous
 
 
 ### Example XML Response

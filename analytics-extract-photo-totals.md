@@ -1,4 +1,4 @@
-# API Method: /api/analtics/extract/photo-totals
+# API Method: /api/analytics/extract/photo-totals
 # flags=comments
 
 Extract a complete list of aggregated totals from one or more sites updated since a certain point in time.

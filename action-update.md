@@ -1,4 +1,4 @@
-# API Method: /api/cta/update
+# API Method: /api/action/update
 
 Update a call-to-action item.
 
@@ -9,10 +9,10 @@ Update a call-to-action item.
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr>
     <td>
-      <tt>cta_id (required)</tt>
+      <tt>action_id (required)</tt>
     </td>
     <td>
-      The ID of the CTA to be updated.
+      The ID of the call to action to be updated.
     </td>
   </tr>
 
@@ -21,16 +21,7 @@ Update a call-to-action item.
       <tt>name (required)</tt>
     </td>
     <td>
-      The name of the CTA.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <tt>data (required)</tt>
-    </td>
-    <td>
-      Data for the CTA.
+      The name of the call-to-action.
     </td>
   </tr>
 
@@ -53,6 +44,8 @@ Update a call-to-action item.
   </tr>
 </table>    
 
+Further to this list, every type of of action has a list of required parameters.
+
 ### Permission level 
 
 The minimum required [permission level](index#permission-level) is:
@@ -63,20 +56,20 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="write" 
-      message="The CTA was updated" cached="0"/>
+      message="The action was updated" cached="0"/>
 
     
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message":"The CTA was updated",
+      "message":"The action was updated",
       "permission_level":"write",
       "cached":"0",
-      "photo":{},
+      "action":{},
       "p": "1",
       "size": "1",
       "site": { ... },
-      "endpoint": "/api/cta/update"
+      "endpoint": "/api/action/update"
     }
 

@@ -138,6 +138,16 @@ Whenever a request to the API fails, a response detailing the exception is retur
 
 ## Methods
 
+### Actions or calls-to-action
+
+Methods for listing and managing calls-to-action overlay during video playback.
+
+* [/api/action/add](action-add): Add a call-to-action item.
+* [/api/action/delete](action-delete): Delete a call-to-action item.
+* [/api/action/exclude](action-exclude): Exclude a call-to-action item for a specific object.
+* [/api/action/get](action-get): Get a list of action items.
+* [/api/action/update](action-update): Update a call-to-action-item.
+
 ### Analytics reporting
 
 Methods for creating and managing albums and channels.
@@ -160,15 +170,6 @@ Methods for managing and querying video files attachments.
 
 * [/api/photo/attachment/list](photo-attachment-list): Return a list of files attached to a video.
 * [/api/photo/attachment/upload](photo-attachment-upload): Upload attachments to a video.
-
-### Call-to-action
-
-Methods for listing and managing calls-to-actin.
-
-* [/api/cta/add](cta-add): Add a call-to-action item.
-* [/api/cta/delete](cta-add): Delete a call-to-action item.
-* [/api/cta/get](cta-add): Get a list of CTA items.
-* [/api/cta/update](cta-add): Update a call-to-action-item.
 
 ### Comments
 
@@ -416,7 +417,7 @@ Of course, unpublished content on public sites and any content on non-public sit
 
 ## Token access to photos and videos
 
-In general terms, access to photos and videos can be controlled through an identifier (`photo_id`) and a shared secret (`token`). Using a combination of these two, you will always be able to retrieve the full URL of an object. This method can be used to grant access to unpublished or hidden videos to select users, for example through an *embed* code. This approach combined with [time-limited tokens](#time-limited-tokens) allows for fine-grained control of who has access to item and when.
+In general terms, access to photos and videos can be controlled through an identifier (`photo_id`) and a shared secret (`token`). Using a combination of these two, you will always be able to retrieve the full URL of an object. This method can be used to grant access to unpublished or hidden videos to select users, for example through an *embed* code. 
 
 * On publicly accessible sites, both the `photo_id` and `token` of any published photo or video is freely available through the API.
 * On closed sites, `token`s on published videos are available to visitors with their [sessions signed](session-redeem-token). 
@@ -425,44 +426,6 @@ In general terms, access to photos and videos can be controlled through an ident
 Put plainly:
 * If a `token` is shared, a user will always have access to an item.
 * When a video is made public, the token is too. 
-
----
-
-## Time-limited tokens
-
-In some cases, you will want to grant visitors time-limited access to a video or a photo. To do so you will be using [the secret `token`](#token-access-to-photo-and-videos) to generate a new and time-limited token from two parts:
-
-* An expiration timestamp, `expire`, in [UTC seconds after epoch](http://en.wikipedia.org/wiki/Unix_time), i.e `1292438117`. Before the expiration time, the signature is accepted. After this time, the signature is denied. 
-* The `photo_id` to identify the item, i.e. `97531`.
-
-These parameters are collated alphabetically into a string, which is in turn transformed into a HMAC-SHA1 hash using the secret `token` (i.e. `123abc`). 
-
-    expire1292438117photo_id97531
-    
-The collated string is signed with `token`:
-
-    hmac_sha1('123abc', 'expire1292438117photo_id97531')
-     = 5ea04282ea3c4a9beca6234606006b56e0cb923d
-
-The resulting hash and `expire` are concatenated into the *time-limited token* such as this:
-
-    5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-
-This final token can be used in place of [the traditional token](#token-access-to-photos-and-videos) with URLs and API calls where specified:
-
-    // Download HD version
-    http://video.example.com/123/97531/5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117/video_hd
-    // Mobile redirect
-    http://video.example.com/m/d/97531/5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-    // Get info through API
-    http://video.example.com/api/photo/list?photo_id=97531&token=5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-      
-An time-limited embed code for a single video might look like this:
-
-    <iframe src="http://videos.23video.com/v.ihtml?token=5ea04282ea3c4a9beca6234606006b56e0cb923d-1292438117
-      &source=embed&photo%5fid=7512173" width="640" height="360" frameborder="0" border="0" 
-      scrolling="no" allowfullscreen="1" mozallowfullscreen="1" webkitallowfullscreen="1">
-    </iframe>
 
 ---
 

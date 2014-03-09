@@ -1,4 +1,4 @@
-# API Method: /api/analtics/extract/play-details
+# API Method: /api/analytics/extract/play-details
 # flags=comments
 
 Extract a details list of all photos on a specific site from the analytics engine.

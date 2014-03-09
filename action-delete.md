@@ -1,4 +1,4 @@
-# API Method: /api/cta/delete
+# API Method: /api/action/delete
 
 Delete a call-to-action.
 
@@ -8,7 +8,7 @@ Delete a call-to-action.
   <tr><th>Parameter</th><th>Description</th></tr>
   <tr>
     <td>
-      <tt>cta_id (required)</tt>
+      <tt>action_id (required)</tt>
     </td>
     <td>
       The ID of the call-to-action to be deleted.
@@ -26,20 +26,20 @@ The minimum required [permission level](index#permission-level) is:
 ### Example XML Response
 
     <response status="ok" permission_level="write" 
-      message="The CTA was deleted" cached="0"/>
+      message="The action was deleted" cached="0"/>
 
     
 ### Example JSON Response
 
     {
       "status": "ok", 
-      "message":"The CTA was deleted",
+      "message":"The action was deleted",
       "permission_level":"write",
       "cached":"0",
-      "cta":{},
+      "action":{},
       "p": "1",
       "size": "1",
       "site": { ... },
-      "endpoint": "/api/cta/delete"
+      "endpoint": "/api/action/delete"
     }
 

@@ -1,4 +1,4 @@
-# API Method: /api/cta/get
+# API Method: /api/action/get
 
 List all calls-to-action for an object.
 
@@ -13,7 +13,7 @@ A list can be retrieved either for a video using a combinatin of `photo_id`/`tok
       <tt>photo_id</tt>
     </td>
     <td>
-      The ID of the video to fetch CTA for.
+      The ID of the video to fetch call-to-action for.
     </td>
   </tr>
 
@@ -32,7 +32,7 @@ A list can be retrieved either for a video using a combinatin of `photo_id`/`tok
       <tt>object_id</tt>
     </td>
     <td>
-      The ID of the object to fetch CTA for. Using `object_id` requires `write` permissions.
+      The ID of the object to fetch call-to-action for. Using `object_id` requires `write` permissions.
     </td>
   </tr>
 
@@ -45,6 +45,14 @@ A list can be retrieved either for a video using a combinatin of `photo_id`/`tok
     </td>
   </tr>
 
+  <tr>
+    <td>
+      <tt>exclude_items_p</tt>
+    </td>
+    <td>
+      Boolean to specify whether excluded/disabled actions should be omitted from the result. The default is `1` and this parameter only has effect with `write` permissions and lookups by `object_id`.
+    </td>
+  </tr>
 </table>    
 
 ### Permission level 
@@ -67,7 +75,7 @@ When looking up non-video objects, the minimun level is:
     <response status="ok" permission_level="anonymous" 
       p="1" size="3" total_count="3" cached="1" 
       cache_time="1384295763">
-        <cta cta_id="3526910" name="Test 1" type="ad" 
+        <action action_id="3526910" name="Test 1" type="ad" 
           start_time="before" exclude_objects="" end_time="after" 
           vast_url="http://yahoo.com/..."/>
         (...)
@@ -80,8 +88,8 @@ When looking up non-video objects, the minimun level is:
       "permission_level":"anonymous",
       "cached":"1",
       "cache_time":"1384296443",
-      "cta":[
-        {"cta_id": "3526910", "name": "Test 1", "type": "ad", "start_time": "before", 
+      "actions":[
+        {"action_id": "3526910", "name": "Test 1", "type": "ad", "start_time": "before", 
         "exclude_objects": "", "end_time": "after", "vast_url": "http://yahoo.com/..."},
         (...)
       ],
@@ -89,5 +97,5 @@ When looking up non-video objects, the minimun level is:
       "size": "3",
       "total_count": "3",
       "site": {...},
-      "endpoint": "/api/photo/cta/get"
+      "endpoint": "/api/action/get"
     }

@@ -1,4 +1,4 @@
-# API Method: /api/analtics/extract/play-totals
+# API Method: /api/analytics/extract/play-totals
 # flags=comments
 
 Extract total values from a site, a single photo or a series of photos from the analytics engine as daily and summed values.

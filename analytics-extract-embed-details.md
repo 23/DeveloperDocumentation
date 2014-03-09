@@ -1,4 +1,4 @@
-# API Method: /api/analtics/extract/embed-details
+# API Method: /api/analytics/extract/embed-details
 # flags=comments
 
 Extract a detailed list of all embed sources on a specific site from the analytics engine.

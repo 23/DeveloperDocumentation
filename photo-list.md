@@ -1,5 +1,4 @@
 # API Method: /api/photo/list
-# flags=comments
 
 Return a list of photos or videos.
 
@@ -75,12 +74,22 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
       <tt>tag_mode</tt>
     </td>
     <td>
-      Set the value <tt>and</tt> means that all tags must be present for a videos or photos to be included in the response.<br/>
+      Set the value <tt>all</tt> means that all tags must be present for a videos or photos to be included in the response.<br/>
       Specifying the value <tt>any</tt> will get you all videos or photos with just one of the tags.<br/>
       <i>Default:</i> <tt>and</tt>
     </td>
   </tr>
 
+  <tr>
+    <td>
+      <tt>custom_variable_mode</tt>
+    </td>
+    <td>
+      To search in custom variables, set this value to either <tt>all</tt> or <tt>any</tt> -- specify each custom variable to search for by key in the parameters as well. When you set the value to <tt>all</tt>, every specified custom variable filter must match. Specifying the value <tt>any</tt> will get you all videos or photos with just a single matching custom variable in the filters.<br/>
+      <i>Default:</i> <tt>none</tt>
+    </td>
+  </tr>
+  
   <tr>
     <td>
       <tt>search</tt>
@@ -195,6 +204,17 @@ Note, that since the `photo_id` and `album_id` parameters might both be matched 
     <td>
       Filter results by whether or not a geographic coordinate has been associated with the photo or video.
       <i>Default:</i> <i>(empty)</i><br/>
+      <i>Valid values:</i> <i>(empty)</i>, <tt>0</tt> or <tt>1</tt>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt>include_actions_p</tt>
+    </td>
+    <td>
+      Include a list of Actions for photo object. This options is only allowed when requesting a single photo object. In other cases, use [/api/action/get](action-get) to retrieve the same data.
+      <i>Default:</i> <i>1</i><br/>
       <i>Valid values:</i> <i>(empty)</i>, <tt>0</tt> or <tt>1</tt>
     </td>
   </tr>

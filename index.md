@@ -29,7 +29,7 @@ Again, you need OAuth signatures (see above), but you can use [_privileged crede
 This is the only case where you will need to worry about [the OAuth authentication flow](oauth) (since you can use [_privileged credentials_](#permission-levels) otherwise). Along with everything else, you need to decide on a [permission level](#permission-levels) to authenticate users at.
 
 **_Giving visitors access to content through SSO or a paywall_**:<br/>
-There are two different ways of granting user access: [Time-limited tokens](#time-limited-tokens) grants access to a single video for a limited time. And [Session signing](session-get-token) will grant them access to the content on an entire site. The token approach is designed for securely sharing a piece of content while the session aproach is designed to grant users full access to a site, it's content and the features afforded by the 23 Video templating engine.
+Users can be granted access through single sign-on or "[session signing](session-get-token)", which will grant them access to the content on an entire site. This aproach is designed to grant users full access to a site, it's content and the features afforded by the 23 Video templating engine.
 
 As is clear from this list, the 23 API can be used to achieve vastly different goals in different contexts. If you unsure on how to approach an integration, [just ask us](developers@23company.com).
 
@@ -235,6 +235,7 @@ Methods for uploading and managing videos and photos.
 * [/api/photo/delete](photo-delete): Delete a photo or video.
 * [/api/photo/frame](photo-frame): Extract a single frame of a video clip as a JPEG image.
 * [/api/photo/get-replace-token](photo-get-replace-token): Get a token for browser-based and non-authenticated replace of photos, thumbnails and videos.
+* [/api/photo/get-transcoding-progress](photo-get-transcoding-progress): Get the transcoding progress of a specific video.
 * [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
 * [/api/photo/list](photo-list): List and search through photos and videos.
 * [/api/photo/rate](photo-rate): Rate a photo or video.

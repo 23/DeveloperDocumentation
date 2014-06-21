@@ -17,6 +17,7 @@ Update the meta data about a live stream.
   <tr><td><tt>auto_record_p</tt></td><td>Automatically record streams to the site's video archive.<br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
   <tr><td><tt>publish_recordings_p</tt></td><td>Publish recordings to the site immediately.<br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
     <tr><td><tt>show_countdown_p</tt></td><td>Show a count down to the next schedule stream in the video player.<br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
+    <tr><td><tt>broadcasting_p</tt></td><td>Mark whether the stream is live broadcasting or not.<br/><i>Allowed values:</i> <tt>0</tt> or <tt>1</tt></td></tr>
 </table>
 
     

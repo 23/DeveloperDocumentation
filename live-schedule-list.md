@@ -51,5 +51,5 @@ The minimum required [permission level](index#permission-level) is:
       "p": "1",
       "size": "1",
       "site": { ...},
-      "endpoint": "/api/live/start-recording"
+      "endpoint": "/api/live/schedule/list"
     }

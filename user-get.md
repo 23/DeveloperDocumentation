@@ -7,7 +7,7 @@ Get information about an existing user.
 ### Parameters
 <table class="pretty">
   <tr><th>Parameter</th><th>Description</th></tr>
-  <tr><td><tt>user_id</tt> <small>(required)</small></td><td>The system ID for the user.</td></tr>
+  <tr><td><tt>user_id</tt></td><td>The system ID for the user. If this parameter is omitted, information about the currently logged in user is returned.</td></tr>
 </table>
 
 

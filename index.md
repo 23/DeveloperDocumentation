@@ -217,6 +217,7 @@ Methods for working with the schedule for live streams
 * [/api/live/schedule/add](live-schedule-add): Add a time to the streaming schedule.
 * [/api/live/schedule/list](live-schedule-list): List the upcoming streaming schedule.
 * [/api/live/schedule/remove](live-schedule-remove): Remove a time from the streaming schedule.
+* [/api/live/schedule/update](live-schedule-update): Update a schedule item.
 
 ### Live recording <small>(closed beta)</small>
 
@@ -227,6 +228,13 @@ Methods for recording from live streams.
 * [/api/live/recording/status](live-recording-status): Status on current recording.
 * [/api/live/recording/stop](live-recording-stop): Stop recording a video stream.
 
+### Protection
+
+Methods for managing video and stream protection. Be sure to read [the introduction to protection](protection) before implementing these methods.
+
+* [/api/protection/protect](protection-protect): Protect a video or stream.
+* [/api/protection/unprotect](protection-unprotect): Unprotect a video or stream.
+* [/api/protection/verify](protection-verify): Verify access to a video or stream.
 
 ### Photos and videos
 
@@ -234,6 +242,7 @@ Methods for uploading and managing videos and photos.
 
 * [/api/photo/delete](photo-delete): Delete a photo or video.
 * [/api/photo/frame](photo-frame): Extract a single frame of a video clip as a JPEG image.
+* [/api/photo/get-ratings](photo-get-ratings): Get a list of photo ratings.
 * [/api/photo/get-replace-token](photo-get-replace-token): Get a token for browser-based and non-authenticated replace of photos, thumbnails and videos.
 * [/api/photo/get-transcoding-progress](photo-get-transcoding-progress): Get the transcoding progress of a specific video.
 * [/api/photo/get-upload-token](photo-get-upload-token): Get a token for browser-based and non-authenticated uploading.
@@ -427,6 +436,12 @@ In general terms, access to photos and videos can be controlled through an ident
 Put plainly:
 * If a `token` is shared, a user will always have access to an item.
 * When a video is made public, the token is too. 
+
+---
+
+## Access protection on streams
+
+The platform and API provides full [protection scheme](protection) for securing access to videos, for example with passwords, geographic location, paywalls or even through third-party services. This builds on top of the `id` + `token` method described above and is covered in detail in [*Protecting videos and streams*](protection).
 
 ---
 

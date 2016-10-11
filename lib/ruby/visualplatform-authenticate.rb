@@ -15,7 +15,7 @@ require 'optparse'
 require 'rubygems'
 require 'oauth'
 
-OPTIONS = {
+options = {
   :outfile  => 'oauth.yml'
 }
 
@@ -33,11 +33,11 @@ ARGV.options do |o|
   
   o.on("-o", "--outfile=[val]", String,
        "Yaml output file",
-       "Default: #{OPTIONS[:outfile]}")     { |OPTIONS[:outfile]| }
+       "Default: #{options[:outfile]}")     { |opts| options[:outfile] = opts }
   o.on("-k", "--key=val", String,
-       "Consumer key for Visual Platform app")       { |key| OPTIONS[:key] = key}
+       "Consumer key for Visual Platform app")       { |key| options[:key] = key}
   o.on("-s", "--secret=val", String,
-       "Consumer secret for Visual Platform app")    { |secret| OPTIONS[:secret] = secret}
+       "Consumer secret for Visual Platform app")    { |secret| options[:secret] = secret}
   
   o.separator ""
 
@@ -45,11 +45,11 @@ ARGV.options do |o|
   o.parse!
 end
 
-unless OPTIONS[:key] && OPTIONS[:secret]
+unless options[:key] && options[:secret]
   raise ArgumentError, "Must supply consumer key and secret (use -h for help)"
 end
 
-consumer      = OAuth::Consumer.new OPTIONS[:key], OPTIONS[:secret], {:site => VP_OAUTH}
+consumer      = OAuth::Consumer.new options[:key], options[:secret], {:site => VP_OAUTH}
 request_token = consumer.get_request_token
 
 puts "Please visit the following URL in your browser to authorize your application, then enter the 4 character security code when done: #{request_token.authorize_url}"
@@ -76,6 +76,6 @@ api:
   oauth: #{VP_OAUTH}
 EOT
 
-File.open(OPTIONS[:outfile], "w") do |f|
+File.open(options[:outfile], "w") do |f|
   f.write oauth_yml
 end

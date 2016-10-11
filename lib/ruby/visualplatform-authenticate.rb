@@ -2,7 +2,7 @@
 
 # Instructions:
 #
-# Register your application by following the instruction on 
+# Register your application by following the instruction on
 #   http://community.23video.com/api/
 #
 # Upon successful registration, you'll get a yaml file with oauth credentials
@@ -23,14 +23,14 @@ VP_OAUTH = "http://api.visualplatform.net"
 
 ARGV.options do |o|
   script_name = File.basename($0)
-  
+
   o.set_summary_indent('  ')
   o.banner =    "Usage: #{script_name} [OPTIONS]"
   o.define_head "Create a yaml file for Visual Platform OAuth"
   o.separator   ""
   o.separator   "[-k] and [-s] options are mandatory"
   o.separator   ""
-  
+
   o.on("-o", "--outfile=[val]", String,
        "Yaml output file",
        "Default: #{options[:outfile]}")     { |opts| options[:outfile] = opts }
@@ -38,7 +38,7 @@ ARGV.options do |o|
        "Consumer key for Visual Platform app")       { |key| options[:key] = key}
   o.on("-s", "--secret=val", String,
        "Consumer secret for Visual Platform app")    { |secret| options[:secret] = secret}
-  
+
   o.separator ""
 
   o.on_tail("-h", "--help", "Show this help message.") { puts o; exit }
@@ -54,17 +54,17 @@ request_token = consumer.get_request_token
 
 puts "Please visit the following URL in your browser to authorize your application, then enter the 4 character security code when done: #{request_token.authorize_url}"
 oauth_verifier =  gets
-response = consumer.token_request(consumer.http_method, 
+response = consumer.token_request(consumer.http_method,
                                   (consumer.access_token_url? ? consumer.access_token_url : consumer.access_token_path),
-                                  request_token, 
-                                  {}, 
+                                  request_token,
+                                  {},
                                   :oauth_verifier =>  oauth_verifier.chomp)
 access_token = OAuth::AccessToken.new(consumer,response[:oauth_token],response[:oauth_token_secret])
 
 oauth_yml = <<-EOT
 consumer:
-  key: #{OPTIONS[:key]}
-  secret: #{OPTIONS[:secret]}
+  key: #{options[:key]}
+  secret: #{options[:secret]}
 access:
   token: #{access_token.token}
   secret: #{access_token.secret}
